@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/addProfileInfo', 'ProfileController@addProfileInfo')->name('addProfileInfo');
+
+Route::get('/addDog', 'DogController@showAddDog')->name('addDog');
+Route::post('/addDog', 'DogController@addDog');

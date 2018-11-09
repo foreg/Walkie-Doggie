@@ -23,6 +23,7 @@
             </div>
         </fieldset>
     </form>
+    <a href="{{route('addDog')}}"> добавить собаку</a>
 </div>
 </body>
 </html>
