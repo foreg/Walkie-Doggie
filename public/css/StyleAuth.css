@@ -1,0 +1,13 @@
+body{
+    background-image: url('../img/bgiAuth.jpg');
+}
+.card{
+    /*width: 80%!important;*/
+    /*border-radius: 2%!important;*/
+    /*opacity: 0.8;*/
+    background: #ffffff !important;
+}
+.btn-primary{
+    background-color:#ED2553!important;
+    border-color: #ED2553!important;
+}
