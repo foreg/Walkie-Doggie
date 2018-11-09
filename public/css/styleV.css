@@ -80,7 +80,7 @@ html, body{
 }
 
 a{
-	text-decoration: none;
+	text-decoration: none !important;
 }
 li{
 	list-style: none;
@@ -89,23 +89,38 @@ body {
 	font-family: sans-serif;
 	background: #fff;
 }
-main{
+.py-4{
+	padding-top: 0 !important;
 	display: flex;
 	flex-direction: column;
 }
 
 /* основы*/
 
+.promo{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	
+}
+
 .main__block {
 	position: relative;
 	display: flex;
 }
-.container {
-	display: flex;
-	flex-direction: column;
+
+.back{
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
 	width: 100%;
 }
 
+.block_fisrt{
+
+}
 
 /* ХЕДЕР */
 .burger_item{
@@ -134,15 +149,17 @@ header{
 .header__logo {
 	display: flex;
 	position: relative;
-	right: 10%;
 	cursor: pointer;
-	margin : 5px 15px 0 0; 
+}
+
+.logo_container{
+	height: 4.5vw;
 }
 
 .header__logo img {
-	width: 100px;
-	height: 45px;
-	margin-bottom: 5px;
+	margin: 5px 0;
+	width: 69px;
+	height: 29px;
 }
 
 @media screen and (max-width: 897px){
@@ -158,15 +175,15 @@ header{
 	font-family: 'Ropa Sans Pro SCPTT Regular';
 	color: #fff;
 	opacity: 0.8;
-	text-align: center;
+	/*text-align: center;*/
 	position: relative;
-	padding: 12px 22px;
+	padding: 12px 15px;
 	font-size: 20pt;
 }
 
 .topnav a:hover{
 	opacity: 1;
-	border-top: 3px solid #efaf1e;
+	border-bottom: 3px solid #ED2553;
 }
 
 .topnav a img{
@@ -256,6 +273,8 @@ header{
 	align-self: center;
 }
 .container__text {
+	background-image: url(../img/bg.jpg) no-repeat;
+
 	display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -265,7 +284,14 @@ header{
     top: 40%;
     left: 8%;
 }
-.container__text h1 {
+
+.block_first{
+	position: relative;
+	top: 38%;
+}
+
+
+.block_first h1 {
 	font-family: 'Bebas Neue Book';
 	color: #fff;
 	font-size: 60px;
@@ -274,15 +300,14 @@ header{
 	text-align: left;
 	letter-spacing: 8px;
 }
-.container__text h1:after{
+.block_first h1:after{
 	content: "";
 	display: block;
-	border-bottom: 3px solid #efaf1e;
-	width: 36.4%;
-
+	border-bottom: 3px solid #ED2553;
+	width: 16.4%;
 }
 
-.container__text h2 {
+.block_first h2 {
 	font-family: 'Bebas Neue Book';
 	color: #fff;
 	font-size: 28px;
@@ -293,7 +318,7 @@ header{
 }
 
 
-.container__text .button__span 
+.block_first .button__span 
 {
 	display: flex;
 	justify-content: left;
@@ -314,7 +339,7 @@ header{
 }
 
 /* 4 БЛОКА */
-.container__items{
+.container__items, .container__status{
 	align-items: center;
 	display: flex;
 
@@ -324,7 +349,7 @@ header{
 	width: 100%;
 }
 
-.container__items .items__h2 {
+.container__items .items__h2,  .container__status .items__h2{
 	position: relative;
 	margin-top: 73px;
 	margin-bottom: 20px;
@@ -334,6 +359,14 @@ header{
 	color: #000;
 	font-family: 'Ropa Sans Pro SC Regular';
 	font-size: 34px;
+}
+
+.items__h2:after{
+	content: "";
+	display: block;
+	margin: 0 auto;
+	border: 2px solid #ED2553;
+	width: 43%;
 }
 
 .items__row {
@@ -376,7 +409,24 @@ header{
 	align-self: center;
 	position: relative;
 	font-size: 14px;
+	padding: 2px 14px;
 	text-align: center;
+}
+
+
+/* КОНЕ1 4 БЛОКОВ*/
+
+/*  КРУГИ */
+
+.row_circle{
+	 	width:50px;
+    height:50px;
+    border-radius:20px;
+    font-size:12px;
+    color:#fff;
+    line-height:50px;
+    text-align:center;
+    background:#000
 }
 
 
