@@ -29,6 +29,7 @@ class MapController extends Controller
     }
 
     public function getCoords() {
+        header('Access-Control-Allow-Origin: *');
         $result = array(
            "type" => "FeatureCollection", 
             "features" => array(),
@@ -46,5 +47,25 @@ class MapController extends Controller
             array_push($result["features"], ["type" => "Feature", "id"=>$walk->id, "geometry"=>["type"=>"Point", "coordinates"=>$coords], "properties"=>["balloonContentHeader"=>"<h1>".Dog::find($walk->dog_id)->name."</h1>", "balloonContentBody"=>$walk->dt_list."<br>".$walk->dt_w_start."<br>".$walk->dt_w_duration."<br>".$walk->dt_a_start."<br>".$walk->dt_a_finish."<br>".$walk->price_start."<br>".$walk->adress."<br>", "clusterCaption"=>"Вугул собак"]]);
         };
         return json_encode($result);
+    }
+    public function getCoordsJSONP() {
+        header('Access-Control-Allow-Origin: *');
+        $result = array(
+           "type" => "FeatureCollection", 
+            "features" => array(),
+        );
+        $allWalks = Walk::all();
+        foreach ($allWalks as $walk) {
+            $adress = urlencode($walk->adress);
+            $response = file_get_contents("https://geocode-maps.yandex.ru/1.x/?geocode=$adress");
+            $coords = new \SimpleXMLElement($response);
+            $coords = $coords->GeoObjectCollection->featureMember[0]->GeoObject->Point->pos;
+            $coords = explode(' ', $coords);
+            $x = floatval($coords[0]);
+            $coords[0] = floatval($coords[1]);
+            $coords[1] = $x;
+            array_push($result["features"], ["type" => "Feature", "id"=>$walk->id, "geometry"=>["type"=>"Point", "coordinates"=>$coords], "properties"=>["balloonContentHeader"=>"<h1>".Dog::find($walk->dog_id)->name."</h1>", "balloonContentBody"=>$walk->dt_list."<br>".$walk->dt_w_start."<br>".$walk->dt_w_duration."<br>".$walk->dt_a_start."<br>".$walk->dt_a_finish."<br>".$walk->price_start."<br>".$walk->adress."<br>", "clusterCaption"=>"Вугул собак"]]);
+        };
+        return $_GET['callback'] . '('.json_encode($result).')';
     }
 }
