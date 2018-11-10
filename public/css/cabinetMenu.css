@@ -345,4 +345,10 @@ body  {
 	margin-top: 0;
 	margin-bottom: 30px;
 }
+.btn-walk{
+	margin-top: -10px;
+}
 /*buttons*/
+.walk{
+	margin-top: 0;
+}
