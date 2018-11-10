@@ -67,4 +67,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function createByVK()
+    {
+        $data = $_POST;
+        $user = User::create([
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+        $user->save();
+    }
 }
