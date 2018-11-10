@@ -15,7 +15,7 @@
     </div>      
 <div class="section bgc2">
     <div class="container">
-        <div class="row">
+        <div id="about" class="row">
             <div class="col-xs-12 block_4">
                 <h2 class="items__h2">Почему мы вам нужны</h2>
                 <span class="items__span">Бывают ситуации, когда питомцу необходим уход,
@@ -56,10 +56,9 @@
                     </div>
                     <span class="span_desc">Если вы любите животных и хотели найти
                          подработку связанную с заботой о них, то у нас есть для вас вакансия</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    </div>
-
             </div>
         </div>
     </div>
@@ -67,7 +66,7 @@
 
 <div class="section block_about">
     <div class="container">
-        <div class="row">
+        <div id="service" class="row">
             <div class="col-xs-12 ">
                 <div class="container__status">
                     <h2 class="items__h2_about">Как работает наш сервис</h2>
@@ -185,7 +184,7 @@
 
 <div class="section">
     <div class="container">
-        <div class="row">
+        <div id="rewiews" class="row">
             <div class="col-xs-12 ">
                 <div class="youtube_container">
                      <h2 class="items__h2">Отзывы наших клиентов</h2>
@@ -221,12 +220,12 @@
 
 <div class="section bg_quests">
     <div class="container">
-        <div class="row">
+        <div id="questions"  class="row">
             <div class="col-xs-12 container_questions">
                 <h2 class="items__h2">Часто задаваемые вопросы</h2>
                 <div class="quest_item">
                     <div id="demo" class="demoVue">
-                    <h3 id="h3_item" v-on:click="show=!show" class="h3_quest" onclick="Pseudo()">Моя собака будет гулять на поводке?</h3>
+                    <h3 id="h3_item" v-on:click="show=!show" class="h3_quest1" onclick="Pseudo()">Моя собака будет гулять на поводке?</h3>
                        <transition name="fade">
                        <span id="quest1" class="quest__span" v-if='show'>Да, конечно! Мы не отпускаем собак с поводка, кроме собачьих площадок. 
                     Каждый выгульщик гуляет на специальной амуниции: страхующий ошейник, поводок и пояс,

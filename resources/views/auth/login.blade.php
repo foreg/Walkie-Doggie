@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="css/StyleAuth.css">
+@extends('layouts.app1')
 
-@extends('layouts.app')
+<link rel="stylesheet" href="css/StyleAuth.css">
 
 @section('content')
 <div class="container">
