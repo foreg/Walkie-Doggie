@@ -22,3 +22,6 @@ Route::post('/addProfileInfo', 'ProfileController@addProfileInfo')->name('addPro
 
 Route::get('/addDog', 'DogController@showAddDog')->name('addDog');
 Route::post('/addDog', 'DogController@addDog');
+
+Route::get('/editDog/{id}', 'DogController@showEditDog')->name('editDog');
+Route::post('/editDog/{id}', 'DogController@editDog');

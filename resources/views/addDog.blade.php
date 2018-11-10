@@ -11,6 +11,7 @@
     <form action="{{route('addDog')}}" method="post">
         @csrf
         <h1>Добавление собаки</h1>
+        <h1>{{$message}}</h1>
         <fieldset>
             <div class=""> 
                 <div class="">name</div> <input id="name" name="name" type="text" placeholder="name" value = '' >
