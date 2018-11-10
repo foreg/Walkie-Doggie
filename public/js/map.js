@@ -25,8 +25,8 @@ function init()
             clusterDisableClickZoom: true
         });
 
-    om.objects.options.set('preset', 'islands#greenDogIcon');
-    om.clusters.options.set('preset', 'islands#greenClusterIcons');
+    om.objects.options.set('preset', 'islands#redDogIcon');
+    om.clusters.options.set('preset', 'islands#redClusterIcons');
     map.geoObjects.add(om);
 
     $.ajax
