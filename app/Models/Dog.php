@@ -48,4 +48,8 @@ class Dog extends Eloquent
 	{
 		return $this->belongsTo('App\User');
 	}
+	public function walks()
+    {
+        return $this->hasMany('App\Models\Walk', 'dog_id');
+    }
 }

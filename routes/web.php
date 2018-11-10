@@ -25,3 +25,6 @@ Route::post('/addDog', 'DogController@addDog');
 
 Route::get('/editDog/{id}', 'DogController@showEditDog')->name('editDog');
 Route::post('/editDog/{id}', 'DogController@editDog');
+
+
+Route::get('/getCoords', 'MapController@getCoords');

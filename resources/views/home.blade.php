@@ -52,7 +52,7 @@
                 <div class="">age</div> <input id="age" name="age" type="text" placeholder="age" value = {{$dogInfo['age']}} >
                 <div class="">sex</div> <input id="sex" name="sex" type="text" placeholder="sex" value = {{$dogInfo['sex']}} >
                 <div class="">breed</div> <input id="breed" name="breed" type="text" placeholder="breed" value = {{$dogInfo['breed']}} >
-                <div class="">size</div> <input id="size" name="size" type="text" placeholder="size" value = {{$dogInfo['size']}}' >
+                <div class="">size</div> <input id="size" name="size" type="text" placeholder="size" value = {{$dogInfo['size']}} >
                 <div class="">info</div> <input id="info" name="info" type="text" placeholder="info" value = {{$dogInfo['info']}} >
                 @else
                 <div class="">name</div> <input id="name" name="name" type="text" placeholder="name" value = '' >
