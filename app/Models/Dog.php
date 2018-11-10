@@ -44,8 +44,8 @@ class Dog extends Eloquent
 		'user_id'
 	];
 
-	public function user()
+	public function users()
 	{
-		return $this->belongsTo(\App\Models\User::class);
+		return $this->belongsTo('App\User');
 	}
 }
