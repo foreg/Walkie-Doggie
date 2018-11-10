@@ -28,3 +28,4 @@ Route::post('/editDog/{id}', 'DogController@editDog');
 
 
 Route::get('/getCoords', 'MapController@getCoords');
+Route::get('/map', 'MapController@index');
