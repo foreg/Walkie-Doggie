@@ -27,11 +27,11 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
-        <div class="container logo_container">
+        <div class="container logo_container notIndex">
             <div class="row">
                 <div class="col-xs-12 header_container_new">
                     <div class="header__logo col-xs-1"><img class="img_logo" src="img/logo.png" alt="logo"></div>
-                <div class="topnav col-xs-8" id="menuTopnav">
+                <div class="topnav col-xs-7" id="menuTopnav">
                     <a href="{{ route('landing') }}">Главная</a>
                     <a href="#about">О нас</a>
                     <a href="#service">Сервис</a>
@@ -75,55 +75,6 @@
         <main class="py-4">
             @yield('content')
         </main>
-    
-
-    <footer>
-    <div class="footer__container">
-        <div class="container__item">
-            <h2>Навигация</h2>
-            <ul>                                                    
-                <li><a href="{{ route('landing') }}">Главная</a>
-                <li><a href="#about">О нас</a>
-                <li><a href="#service">Сервис</a>
-                <li><a href="#rewiews">Отзывы</a>
-                <li><a href="#questions">Вопросы</a>
-            </ul>
-        </div>
-        <div class="container__item">
-            <h2>Наши партнеры</h2>
-            <ul>
-                <li>ITEM 1
-                <li>ITEM 1
-                <li>ITEM 1
-                <li>ITEM 1
-                <li>ITEM 1
-                <li>ITEM 1
-            </ul>
-        </div>
-        <div class="container__item">
-            <h2>Контакты</h2>
-            <ul>
-                <li>E-mail:  Walkie-Doggie@mail.ru
-                <li>ПРИЁМНАЯ  (3452) 21-88-21
-                <li>СТУДИЯ  (3452) 21-77-77 
-            </ul>
-            <div class="social">
-                <a href="#"><img src="{{ asset('img/insta.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/vk.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/klass.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/facebook.png') }}" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__zag">
-        <div class="zag__block">
-            <span class="block__span">
-                Сервис "Walkie-Doggie"<br />
-                2018
-            </span>
-        </div>
-    </div>
-</footer>
 <script src="js/scriptV.js"></script>
 </body>
 </html>

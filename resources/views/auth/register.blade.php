@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="css/StyleAuth.css">
 
-@extends('layouts.app')
+@extends('layouts.app1')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
