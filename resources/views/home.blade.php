@@ -121,7 +121,26 @@
                         @endif
                     </div>
                     </fieldset>
+                    
                 </form>
+                <fieldset>
+                @if (isset($walkDog))
+                <form action="{{ route('walkDog', $walkDog['id']) }}" method="post" >
+                    <h2>Выгулять "{{$walkDog['name']}}"</h2>
+        
+                    <div class="">adress</div> <input id="adress" name="adress" type="text" placeholder="adress" value = "{{ Auth::user()['adress'] }}" >
+        
+                    <div class="">dt_w_start</div> <input id="dt_w_start" name="dt_w_start" type="date" placeholder="dt_w_start" value = "" >
+                    </div> <input id="dt_w_start" name="dt_w_start" type="time" placeholder="dt_w_start" value = "" >
+        
+                    <div class="">dt_w_duration</div> <input id="dt_w_duration" name="dt_w_duration" type="text" placeholder="dt_w_duration" value = "" >
+        
+                    <div class="">price</div> <input id="price" name="price" type="text" placeholder="price" value = "" >
+        
+                    <div class="">&nbsp;&nbsp;</div> <input  name="walkDog" type="submit" value="Выгулять" ></div>
+                </form>
+                @endif
+    </fieldset>
             </div>
         </div>
     </div>

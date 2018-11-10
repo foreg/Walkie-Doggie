@@ -60,4 +60,27 @@ class DogController extends Controller
         ]);
         return redirect()->route('home')->with(['messageForDogs' => "Собака успешно сохранена"]);
     }
+
+    public function showWalkDog($id)
+    {
+        $dog = Dog::find(intval($id))->getAttributes();
+        return view('home')->with('walkDog', $dog);
+    }
+
+    public function walkDog($id)
+    {
+        $data = $_POST;
+        $user = Auth::user();
+        $walk = new Walk;
+        $walk->dog_id =    $id;
+        $walk->dt_list =     current_time('mysql');
+        $walk->dt_w_start =     $data['dt_w_start'];
+        $walk->dt_w_duration =     $data['dt_w_duration'];
+        $walk->dt_a_start =     current_time('mysql');
+        $walk->dt_a_finish =     current_time('mysql');
+        $walk->price_start =   $data['price'];
+        $walk->adress =         $data['adress'];
+        $walk->save();
+        return view('home')->with(['messageForDogs' => "@ гуляет"]);
+    }
 }
