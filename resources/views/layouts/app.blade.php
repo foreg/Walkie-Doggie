@@ -40,7 +40,31 @@
                     </div>  
                     <div class="topnav col-xs-4">
                      
-                        @guest
+                        @if (Auth::guest())
+                            <a href="{{ route('login') }}">Логин</a>
+                            <a href="{{ route('register') }}">Регистрация</a>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} 
+                                </a>
+                                <a href="{{ route('home') }}">Кабинет</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Выйти
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+                        <!-- @guest
                           
                                 <a href="{{ route('login') }}">{{ __('Логин') }}</a>
                             
@@ -51,7 +75,7 @@
                          
                         @else
                            
-                                <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" href="{{ route('home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->email }} <span class="caret"></span>
                                 </a>
 
@@ -64,7 +88,7 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                 </form>
-                        @endguest
+                        @endguest -->
                 </div>  
             <div class="burger_item">
                 <a href="#" id="burger_button"><img src="img/burger.png"></a>
