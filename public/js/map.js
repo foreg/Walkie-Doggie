@@ -29,16 +29,12 @@ function init()
     om.clusters.options.set('preset', 'islands#greenClusterIcons');
     map.geoObjects.add(om);
 
-
     $.ajax
     ({
-        url: 'http://localhost/wd/public/getCoords',
+        url: 'getCoords',
         success: function(data)
         {
-            //alert(data);
             om.add(data);
         }
     });
-
 }
-

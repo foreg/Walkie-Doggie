@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'pw_md5', 'name', 'adress', 'phone', 'rights', 'info',
+        'email', 'password', 'name', 'adress', 'phone', 'rights', 'info',
     ];
 
     /**
@@ -25,6 +25,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'pw_md5', 'remember_token',
+        'password', 'remember_token',
     ];
+
+    public function dogs()
+    {
+        return $this->hasMany('App\Models\Dog', 'user_id');
+    }
 }

@@ -1,0 +1,456 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/* Шрифт предложения*/
+@font-face {
+font-family: 'Ropa Sans Pro SC Regular';
+src: url('../fonts/RopaSansSCPro-Regular.eot');
+src: url('../fonts/RopaSansSCPro-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/RopaSansSCPro-Regular.woff') format('woff'),
+url('../fonts/RopaSansSCPro-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Regular';
+src: url('../fonts/MyriadPro-Regular.eot');
+src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/MyriadPro-Regular.woff') format('woff'),
+url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Minion Pro Regular';
+src: url('../fonts/MinionPro-Regular.eot');
+src: url('../fonts/MinionPro-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/MinionPro-Regular.woff') format('woff'),
+url('../fonts/MinionPro-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Bebas Neue Book';
+src: url('../fonts/BebasNeueBook.eot');
+src: url('../fonts/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+url('../fonts/BebasNeueBook.woff') format('woff'),
+url('../fonts/BebasNeueBook.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Bebas Neue Regular';
+src: url('../fonts/BebasNeueRegular.eot');
+src: url('../fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/BebasNeueRegular.woff') format('woff'),
+url('../fonts/BebasNeueRegular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+/* Шрифт меню верх*/
+@font-face {
+font-family: 'Ropa Sans Pro SCPTT Regular';
+src: url('../fonts/RopaSansSCPTT-Regular.eot');
+src: url('../fonts/RopaSansSCPTT-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/RopaSansSCPTT-Regular.woff') format('woff'),
+url('../fonts/RopaSansSCPTT-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+/* шрифт кнопки*/
+@font-face {
+font-family: 'Ropa Sans Pro PTT Regular';
+src: url('../fonts/RopaSansPTT-Regular.eot');
+src: url('../fonts/RopaSansPTT-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/RopaSansPTT-Regular.woff') format('woff'),
+url('../fonts/RopaSansPTT-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+html, body{
+	overflow-x: hidden !important; 
+	height: 100%;
+}
+
+a{
+	text-decoration: none !important;
+}
+li{
+	list-style: none;
+}
+body {
+	font-family: sans-serif;
+	background: #fff;
+}
+.py-4{
+	padding-top: 0 !important;
+	display: flex;
+	flex-direction: column;
+}
+
+/* основы*/
+
+.promo{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	
+}
+
+.main__block {
+	position: relative;
+	display: flex;
+}
+
+.back{
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+.block_fisrt{
+
+}
+
+/* ХЕДЕР */
+.burger_item{
+	width: 100%;
+	display: none;
+	justify-content: flex-end;
+	margin-right: 25px;
+}
+
+.burger_item img{
+	width: 25px;
+}
+
+
+header{
+	z-index: 100;
+	position: relative;
+	border: 1px solid #000;
+	background: #000;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__logo {
+	display: flex;
+	position: relative;
+	cursor: pointer;
+}
+
+.logo_container{
+	height: 4.5vw;
+}
+
+.header__logo img {
+	margin: 5px 0;
+	width: 69px;
+	height: 29px;
+}
+
+@media screen and (max-width: 897px){
+	.topnav{
+		display: none;
+	}
+	.burger_item{
+		display: flex !important;
+	}
+}
+
+.topnav a{
+	font-family: 'Ropa Sans Pro SCPTT Regular';
+	color: #fff;
+	opacity: 0.8;
+	/*text-align: center;*/
+	position: relative;
+	padding: 12px 15px;
+	font-size: 20pt;
+}
+
+.topnav a:hover{
+	opacity: 1;
+	border-bottom: 3px solid #ED2553;
+}
+
+.topnav a img{
+	width: 25px;
+}
+
+/* КОНЕ1 ХЕДЕРА*/
+
+/* футер*/
+.footer__container{
+	position: relative;
+	width: 100%;
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+}
+
+.container__item{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.container__item a{
+	color: #000;
+}
+
+.container__item li{
+	font-family: 'Ropa Sans Pro SC Regular';
+	font-size: 12px;
+	font-weight: 600;
+	opacity: 0.8;
+	text-transform: uppercase;
+}
+
+.container__item li:not(:last-child){
+	margin-bottom: 5px; 
+}
+.container__item li:first-child{
+	margin-top: 10px;
+}
+
+.container__item h2{
+	font-family: 'Ropa Sans Pro SCPTT Regular';
+	margin-top: 25px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.container__item:not(:nth-child(2)) h2:after{
+	content: "";
+	display: block;
+	margin: 0 auto;
+	padding-top: 15px;
+	width: 222px;
+	border-bottom: 3px solid #000;
+}
+
+.container__item:nth-child(2) h2:after{
+	content: "";
+	display: block;
+	margin: 0 auto;
+	padding-top: 15px;
+	width: 400px;
+	border-bottom: 3px solid #000;
+}
+
+.container__item:first-child, .container__item:nth-child(2){
+	margin-right: 50px;
+}
+
+.social{
+	position: relative;
+	margin-top: 8px;
+}
+.social img{
+	width: 27px;
+}
+.social a:hover {
+	opacity: 0.8;
+}
+
+/* коне1 футера*/
+
+.container .main_img{
+	display: flex;
+	width: 100%;
+	align-self: center;
+}
+.container__text {
+	background-image: url(../img/bg.jpg) no-repeat;
+
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 36vw;
+    width: 100%;
+    top: 40%;
+    left: 8%;
+}
+
+.block_first{
+	position: relative;
+	top: 38%;
+}
+
+
+.block_first h1 {
+	font-family: 'Bebas Neue Book';
+	color: #fff;
+	font-size: 60px;
+	font-weight: 600;
+	width: 1003px;
+	text-align: left;
+	letter-spacing: 8px;
+}
+.block_first h1:after{
+	content: "";
+	display: block;
+	border-bottom: 3px solid #ED2553;
+	width: 16.4%;
+}
+
+.block_first h2 {
+	font-family: 'Bebas Neue Book';
+	color: #fff;
+	font-size: 28px;
+	font-weight: 600;
+	width: 1003px;
+	text-align: left;
+	letter-spacing: 9px;
+}
+
+
+.block_first .button__span 
+{
+	display: flex;
+	justify-content: left;
+  margin-top: 16px;
+  min-width: 217px;
+  min-height: 49px;
+  font-size: 18px;
+	letter-spacing: 2px;
+	color: #fff;
+	padding: 5px;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-family: 'Bebas Neue Book', sans-serif;
+}
+
+.black__news a{
+	color: #fff;
+}
+
+/* 4 БЛОКА */
+.container__items, .container__status{
+	align-items: center;
+	display: flex;
+
+	flex-direction: column;
+	background: #f7f7f7;
+	justify-content: center;
+	width: 100%;
+}
+
+.container__items .items__h2,  .container__status .items__h2{
+	position: relative;
+	margin-top: 73px;
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #000;
+	font-family: 'Ropa Sans Pro SC Regular';
+	font-size: 34px;
+}
+
+.items__h2:after{
+	content: "";
+	display: block;
+	margin: 0 auto;
+	border: 2px solid #ED2553;
+	width: 43%;
+}
+
+.items__row {
+	position: relative;
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.items__span{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 53%;
+	margin-bottom: 20px;
+}
+
+.row_item {
+	width: 25vw;
+	position: relative;
+	display: flex;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.row_item .item__span {
+	display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.row_item img{
+	width: 70px;
+}
+
+.span_desc{
+	display: flex;
+	align-self: center;
+	position: relative;
+	font-size: 14px;
+	padding: 2px 14px;
+	text-align: center;
+}
+
+
+/* КОНЕ1 4 БЛОКОВ*/
+
+/*  КРУГИ */
+
+.row_circle{
+	 	width:50px;
+    height:50px;
+    border-radius:20px;
+    font-size:12px;
+    color:#fff;
+    line-height:50px;
+    text-align:center;
+    background:#000
+}
+
+
+/* НАДПИСЬ В ПОДВАЛЕ*/
+
+.footer__zag:before{
+	content: "";
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 946px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.zag__block{
+	position: relative;
+    top: 21%;
+    display: flex;
+    justify-content: center;
+}
+
+.block__span{
+	text-align: center;
+	color: #000;
+	font-family: 'Myriad Pro Regular';
+	font-size: 16px;
+}
