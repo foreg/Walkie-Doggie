@@ -19,7 +19,7 @@
                 <div class="">Инфо</div> <input id="info" name="info" type="text" placeholder="" value = '{{Auth::user()->info}}' >
             </div>
             <div class=""> 
-                <div class="">&nbsp;&nbsp;</div> <input  name="addProfileInfo" type="submit" value="Сохранить" ></div>
+                <div class="">&nbsp;&nbsp;</div> <input  name="addProfileInfo" type="submit" value="Сохранить" >
             </div>
         </fieldset>
     </form>
