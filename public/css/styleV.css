@@ -124,30 +124,6 @@ body {
   flex-direction: row;
 }
 
-/* ХЕДЕР */
-.burger_item{
-	width: 100%;
-	display: none;
-	justify-content: flex-end;
-	margin-right: 25px;
-}
-
-.burger_item img{
-	width: 25px;
-}
-
-
-/*header{
-	z-index: 100;
-	position: relative;
-	border: 1px solid #000;
-	background: #000;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}*/
-
 .header__logo {
 	display: flex;
 	position: relative;
