@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
@@ -27,19 +29,14 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
-        <div class="container logo_container">
+        <div class="container logo_container notIndex">
             <div class="row">
                 <div class="col-xs-12 header_container_new">
-                    <div id="header_item" class="header__logo col-xs-1"  onclick="window.location='{{ url('/') }}'"><img class="img_logo" src="img/logo.png" alt="logo"></div>
-                <div class="topnav col-xs-8" id="menuTopnav">
+                    <div class="header__logo col-xs-1"  onclick="window.location='{{ url('/') }}'"><img class="img_logo" src="img/logo.png" alt="logo"></div>
+                <div class="topnav col-xs-7" id="menuTopnav">
                     <a href="{{ route('landing') }}">Главная</a>
-                    <a href="#about">О нас</a>
-                    <a href="#service">Сервис</a>
-                    <a href="#rewiews">Отзывы</a>
-                    <a href="#questions">Вопросы</a>
                     </div>  
                     <div class="topnav col-xs-4">
-                     
                         @if (Auth::guest())
                             <a href="{{ route('login') }}">Логин</a>
                             <a href="{{ route('register') }}">Регистрация</a>
@@ -71,55 +68,6 @@
         <main class="py-4">
             @yield('content')
         </main>
-    
-
-    <footer>
-    <div class="footer__container">
-        <div class="container__item">
-            <h2>Навигация</h2>
-            <ul>                                                    
-                <li><a href="{{ route('landing') }}">Главная</a>
-                <li><a href="#about">О нас</a>
-                <li><a href="#service">Сервис</a>
-                <li><a href="#rewiews">Отзывы</a>
-                <li><a href="#questions">Вопросы</a>
-            </ul>
-        </div>
-        <div class="container__item">
-            <h2>Наши партнеры</h2>
-            <ul>
-                <li>Donor Search
-                <li>РЭЙ
-                <li>Donor Search
-                <li>РЭЙ
-                <li>Donor Search
-                <li>РЭЙ
-            </ul>
-        </div>
-        <div class="container__item">
-            <h2>Контакты</h2>
-            <ul>
-                <li>E-mail:  Walkie-Doggie@mail.ru
-                <li>ПРИЁМНАЯ  (3452) 21-88-21
-                <li>СТУДИЯ  (3452) 21-77-77 
-            </ul>
-            <div class="social">
-                <a href="#"><img src="{{ asset('img/insta.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/vk.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/klass.png') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('img/facebook.png') }}" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__zag">
-        <div class="zag__block">
-            <span class="block__span">
-                Сервис "Walkie-Doggie"<br />
-                2018
-            </span>
-        </div>
-    </div>
-</footer>
-<script src="js/scriptV.js"></script>
+<!-- <script src="js/scriptV.js"></script> -->
 </body>
 </html>
