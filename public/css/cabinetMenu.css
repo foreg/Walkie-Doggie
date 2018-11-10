@@ -7,7 +7,9 @@
 }
 
 body  {
-	/*background: #1abc9c;*/
+    background-image: url(../img/bgCab1.jpg);
+	/*background: #000000;*/
+    color: white;
 }
 
 
@@ -48,7 +50,7 @@ body  {
 .bt-menu-trigger {
 	/*background: #efaf1e;*/
 	position: fixed;
-	top: 60px;
+	top: 5px;
 	left: 20px;
 	z-index: 100;
 	display: block;
@@ -245,4 +247,7 @@ body  {
 	display: block;
 	width: 10%;
 	border-bottom: solid #ED2553 3px;
+}
+.dataUserr{
+    margin-left: 200px;
 }
