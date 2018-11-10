@@ -6,22 +6,32 @@ var dataUs = new Vue({
             dataUser.showDataUser=true;
             dataUser.showPet=false;
             dataUser.addPet=false;
+
         },
         editPets:function () {
             dataUser.showDataUser=false;
             dataUser.showPet=true;
             dataUser.addPet=false;
+
         },
         addPets:function () {
             dataUser.showDataUser=false;
             dataUser.showPet=false;
             dataUser.addPet=true;
+
+        },
+        goWalk:function () {
+            dataUser.showDataUser=false;
+            dataUser.showPet=false;
+            dataUser.addPet=false;
+
         }
+
     },
     data:{
         showDataUser:true,
         showPet:false,
-        addPet:false
+        addPet:false,
     }
 });
 var dataUser=new Vue({
@@ -37,6 +47,6 @@ var dataUser=new Vue({
     data:{
         showDataUser: this.dataUs.showDataUser,
         showPet:this.dataUs.showPet,
-        addPet:this.dataUs.addPet
+        addPet:this.dataUs.addPet,
     }
 });
