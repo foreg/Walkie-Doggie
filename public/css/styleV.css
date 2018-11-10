@@ -826,6 +826,10 @@ body {
   height: 24px;
 }
 
+.h3_quest1, .h3_quest{
+	cursor: pointer;
+}
+
 .quest_item .h3_quest1.pseudo:after{
   content: "";
   display: block;
