@@ -15,7 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('libs/Bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styleV.css') }}">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -26,7 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-      <header>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
         <div class="container logo_container">
             <div class="row">
                 <div class="col-xs-12">
@@ -73,9 +73,6 @@
                 </div>
             </div>
         </div>
-            
-    </header>
-
         <main class="py-4">
             @yield('content')
         </main>
@@ -128,5 +125,6 @@
         </div>
     </div>
 </footer>
+<script src="js/scriptV.js"></script>
 </body>
 </html>
