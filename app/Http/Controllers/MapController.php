@@ -27,6 +27,7 @@ class MapController extends Controller
     {
         return view('map');
     }
+    
     public function getCoords() {
         $result = array(
            "type" => "FeatureCollection", 

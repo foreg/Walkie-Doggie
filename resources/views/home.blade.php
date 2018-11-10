@@ -28,7 +28,7 @@
         <p> 
             {{$dog->name}} 
             <a href = "{{route('editDog', $dog->id)}}"> Редактировать </a>
-            <a href = "{{route('deleteDog', $dog->id)}}"> Удалить </a>
+            <a href = ""> Удалить </a>
         </p>
     @endforeach
     @endif
