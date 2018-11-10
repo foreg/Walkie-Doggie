@@ -240,7 +240,7 @@ body  {
 	color: #ED2553;
 }
 
-.PersonalData h1:after{
+.lc:after,.rd{
 	content: "";
 	display: block;
 	width: 10%;
