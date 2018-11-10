@@ -30,7 +30,7 @@
         <div class="container logo_container notIndex">
             <div class="row">
                 <div class="col-xs-12 header_container_new">
-                    <div class="header__logo col-xs-1"><img class="img_logo" src="img/logo.png" alt="logo"></div>
+                    <div class="header__logo col-xs-1"><img class="img_logo" src="{{asset('img/logo.png')}}" alt="logo"></div>
                 <div class="topnav col-xs-7" id="menuTopnav">
                     <a href="{{ route('landing') }}">Главная</a>
                     </div>  

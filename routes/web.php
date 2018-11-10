@@ -34,4 +34,4 @@ Route::post('/editDog/{id}', 'DogController@editDog');
 Route::get('/getCoords', 'MapController@getCoords');
 Route::get('/getCoordsJSONP', 'MapController@getCoordsJSONP');
 Route::post('/getCoords', 'MapController@getCoords');
-Route::get('/map', 'MapController@index');
+Route::get('/map', 'MapController@index')->name('map');

@@ -5,13 +5,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/cabinetMenu.css"/>
+    <link rel="stylesheet" href="{{asset('http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('css/cabinetMenu.css') }}"/>
     <script src="js/modernizr.custom.js"></script>
 
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="{{asset('https://cdn.jsdelivr.net/npm/vue/dist/vue.js')}}"></script>
 <nav id="bt-menu" class="bt-menu">
     <br><br><br>
     <a href="#" class="bt-menu-trigger"><span>Меню</span></a>
@@ -22,6 +22,7 @@
         <li><a v-on:click="addPet=!addPet, addPets()" href="#">Добавить питомца</a></li>
         <li><a href="#">Стать догволкером</a></li>
         <li><a href="#">Контакты</a></li>
+        <li><a href="{{route('map')}}">Карта</a></li>
     </ul>
     {{--<ul>--}}
         {{--<li><a href="#" class="bt-icon icon-twitter">Twitter</a></li>--}}
@@ -40,30 +41,30 @@
                     <fieldset>
                         <div class="">
                             <div class="">Ваше имя или название организации</div>
-                            <input id="name" name="name" type="text" placeholder="" value='{{Auth::user()->name}}'>
+                            <input class="inp" id="name" name="name" type="text" placeholder="" value='{{Auth::user()->name}}'>
                             <div class="">Телефон</div>
-                            <input id="phone" name="phone" type="text" placeholder="+79224789108"
+                            <input class="inp" id="phone" name="phone" type="text" placeholder="+79224789108"
                                    value='{{Auth::user()->phone}}'>
                             <div class="">Адрес</div>
-                            <input id="adress" name="adress" type="text" placeholder="" value='{{Auth::user()->adress}}'>
+                            <input class="inp" id="adress" name="adress" type="text" placeholder="" value='{{Auth::user()->adress}}'>
                             <div class="">Инфо</div>
-                            <input id="info" name="info" type="text" placeholder="" value='{{Auth::user()->info}}'>
+                            <input class="inp" id="info" name="info" type="text" placeholder="" value='{{Auth::user()->info}}'>
                         </div>
                         <div class="">
                             <div class="">&nbsp;&nbsp;</div>
-                            <input name="addProfileInfo" type="submit" value="Сохранить">
+                            <input class="btn btn-4 btn-4a"  name="addProfileInfo" type="submit" value="Сохранить">
                         </div>
                     </fieldset>
                 </form>
             </div>
             <div v-if="showPet" class="dataUserr">
-                @if (isset($dogs))
+                <h1 class="lc">Ваши питомцы</h1>
+            @if (isset($dogs))
                     @foreach ($dogs as $dog)
-                        <p>
-                            {{$dog->name}}
-                            <a href="{{route('editDog', $dog->id)}}"> Редактировать </a>
+                            <p class="inp">{{$dog->name}}</p>
+                        <a class="btn btn-4 btn-4a btn-dogs" href="{{route('editDog', $dog->id)}}"> Редактировать </a>
                             {{--<a href = "{{route('deleteDog', $dog->id)}}"> Удалить </a>--}}
-                        </p>
+
                     @endforeach
                 @endif
             </div>
@@ -83,40 +84,40 @@
                 <fieldset>
                 <div class="">
                 @if (isset($dogInfo))
-                        <div class="">name</div> <input id="name" name="name" type="text"
+                        <div class="">Имя</div> <input class="inp" id="name" name="name" type="text"
                                                                         placeholder="name" value= {{$dogInfo['name']}} >
-                        <div class="">age</div> <input id="age" name="age" type="text" placeholder="age"
+                        <div class="">Возраст</div> <input class="inp" id="age" name="age" type="text" placeholder="age"
                                                                        value= {{$dogInfo['age']}} >
-                        <div class="">sex</div> <input id="sex" name="sex" type="text" placeholder="sex"
+                        <div class="">Пол</div> <input class="inp" id="sex" name="sex" type="text" placeholder="sex"
                                                                        value= {{$dogInfo['sex']}} >
-                        <div class="">breed</div> <input id="breed" name="breed" type="text"
+                        <div class="">Порода</div> <input class="inp" id="breed" name="breed" type="text"
                                                                          placeholder="breed"
                                                                          value= {{$dogInfo['breed']}} >
-                        <div class="">size</div> <input id="size" name="size" type="text"
+                        <div class="">Размеры</div> <input class="inp" id="size" name="size" type="text"
                                                                         placeholder="size" value= {{$dogInfo['size']}} >
-                        <div class="">info</div> <input id="info" name="info" type="text"
+                        <div class="">Информация</div> <input class="inp" id="info" name="info" type="text"
                                                                         placeholder="info" value= {{$dogInfo['info']}} >
                     @else
-                        <div class="">name</div> <input id="name" name="name" type="text"
+                        <div class="">Имя</div> <input class="inp" id="name" name="name" type="text"
                                                                         placeholder="name" value=''>
-                        <div class="">age</div> <input id="age" name="age" type="text" placeholder="age"
+                        <div class="">Возраст</div> <input class="inp" id="age" name="age" type="text" placeholder="age"
                                                                        value=''>
-                        <div class="">sex</div> <input id="sex" name="sex" type="text" placeholder="sex"
+                        <div class="">Пол</div> <input class="inp" id="sex" name="sex" type="text" placeholder="sex"
                                                                        value=''>
-                        <div class="">breed</div> <input id="breed" name="breed" type="text"
+                        <div class="">Порода</div> <input class="inp" id="breed" name="breed" type="text"
                                                                          placeholder="breed" value=''>
-                        <div class="">size</div> <input id="size" name="size" type="text"
+                        <div class="">Размеры</div> <input class="inp" id="size" name="size" type="text"
                                                                         placeholder="size" value=''>
-                        <div class="">info</div> <input id="info" name="info" type="text"
+                        <div class="">Информация</div> <input class="inp" id="info" name="info" type="text"
                                                                         placeholder="info" value=''>
                     @endif
                 </div>
                     <div class="">
                         @if (isset($dogInfo))
-                            <div class="">&nbsp;&nbsp;</div> <input name="addDog" type="submit"
+                            <div class="">&nbsp;&nbsp;</div> <input class="btn btn-4 btn-4a" name="addDog" type="submit"
                                                                                 value="Сохранить">
                         @else
-                            <div class="">&nbsp;&nbsp;</div> <input name="addDog" type="submit"
+                            <div class="">&nbsp;&nbsp;</div> <input class="btn btn-4 btn-4a" name="addDog" type="submit"
                                                                                 value="Добавить">
                         @endif
                     </div>
@@ -126,9 +127,9 @@
         </div>
     </div>
 </div>
-<script src="js/classie.js"></script>
-<script src="js/borderMenu.js"></script>
-<script src="js/Home.js"></script>
+<script src="{{asset('js/classie.js')}}"></script>
+<script src="{{asset('js/borderMenu.js')}}"></script>
+<script src="{{asset('js/Home.js')}}"></script>
 </body>
 </html>
 @endsection
