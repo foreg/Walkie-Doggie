@@ -30,11 +30,10 @@
         {{--<li><a href="#" class="bt-icon icon-github">icon-github</a></li>--}}
     {{--</ul>--}}
 </nav>
-{{----}}
 <div class="container">
     <div class="row">
         <div id="dataUser" class="PersonalData col-xs-12">
-            <div  v-if="showDataUser">
+            <div  v-if="showDataUser" class="dataUserr">
                 <form  action="{{route('addProfileInfo')}}" method="post">
                     @csrf
                     <h1 class="lc">Личный кабинет</h1>
@@ -57,7 +56,7 @@
                     </fieldset>
                 </form>
             </div>
-            <div v-if="showPet">
+            <div v-if="showPet" class="dataUserr">
                 @if (isset($dogs))
                     @foreach ($dogs as $dog)
                         <p>
@@ -68,7 +67,7 @@
                     @endforeach
                 @endif
             </div>
-            <div v-if="addPet">
+            <div v-if="addPet" class="dataUserr">
                 @if (isset($dogInfo))
                     <form action="{{route('editDog', $dogInfo['id'])}}" method="post">
                 @else
