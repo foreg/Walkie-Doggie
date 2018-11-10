@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
@@ -30,7 +32,7 @@
         <div class="container logo_container notIndex">
             <div class="row">
                 <div class="col-xs-12 header_container_new">
-                    <div class="header__logo col-xs-1"><img class="img_logo" src="img/logo.png" alt="logo"></div>
+                    <div class="header__logo col-xs-1" onclick="window.location='{{ url('/') }}'"><img class="img_logo" src="img/logo.png" alt="logo"></div>
                 <div class="topnav col-xs-7" id="menuTopnav">
                     <a href="{{ route('landing') }}">Главная</a>
                     </div>  
@@ -59,35 +61,7 @@
                                 </ul>
                             </li>
                         @endif
-                        <!-- @guest
-                          
-                                <a href="{{ route('login') }}">{{ __('Логин') }}</a>
-                            
-                            
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">{{ __('Регистрация') }}</a>
-                                @endif
-                         
-                        @else
-                           
-                                <a id="navbarDropdown" href="{{ route('home') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->email }} <span class="caret"></span>
-                                </a>
-
-                                <a  href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                </form>
-                        @endguest -->
                 </div>  
-            <div class="burger_item">
-                <a href="#" id="burger_button"><img src="img/burger.png"></a>
-            </div>
                 </div>
             </div>
         </div>

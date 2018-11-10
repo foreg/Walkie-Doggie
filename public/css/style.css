@@ -1,8 +1,68 @@
+body{
+	background: #000;
+}
 #map {
     width: 100%;
-    top:0px;
     height:100%;
-    z-index: 100;
-    position: absolute;
-    right: 0;
+    display: flex;
+    position: relative;
+}
+
+.logo_container{
+		max-width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+		position: absolute;
+		background: rgba(0,0,0,0.4) !important;
+}
+
+.topnav a:hover{
+	border-bottom: 3px solid rgba(237, 37, 83, 0.2);
+}
+
+.header__logo{
+	margin-left: 5%;
+}
+
+.logo_container{
+	background-color: #000;
+	z-index: 999;
+	height: 12vh;
+	margin-bottom: -12vh;
+}
+
+
+.container_map{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info_h1 h1{
+	font-size: 22px !important;
+}
+
+.py-4{
+	background: #f7f7f7;
+}
+
+.info__spans{
+	display: flex;
+	flex-direction: column;
+}
+
+.info__spans span{
+	font-family: "Roboto", sans-serif;
+}
+
+
+/*font-family: 'Roboto', sans-serif;*/
+h4{
+	display: flex;
+	align-self: center;
+	font-weight: 600 !important;
+	letter-spacing: 1.1px;
+	font-family: 'Bebas Neue Book', sans-serif !important;
+	font-size: 16px !important;
 }
