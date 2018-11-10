@@ -167,15 +167,6 @@ body {
 	height: 29px;
 }
 
-@media screen and (max-width: 897px){
-	.topnav{
-		display: none;
-	}
-	.burger_item{
-		display: flex !important;
-	}
-}
-
 .topnav{
 	display: flex;
 	height: 60px;
@@ -824,6 +815,27 @@ body {
   margin: -24px 9px 0 0;
   width: 24px;
   height: 24px;
+}
+
+.dropdown{
+	padding: 12px 15px;
+}
+
+
+.dropdown a:first-child:hover{
+	border-bottom: unset !important;
+}
+
+.form-check-label{
+	padding-left: 17px; 
+}
+
+.form-check{
+	padding-left: 0.15rem !important;
+}
+
+.h3_quest1, .h3_quest{
+	cursor: pointer;
 }
 
 .quest_item .h3_quest1.pseudo:after{

@@ -1,5 +1,7 @@
 <?php
-
+header('Access-Control-Allow-Origin:  *');
+header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Authorization');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +32,6 @@ Route::post('/editDog/{id}', 'DogController@editDog');
 
 
 Route::get('/getCoords', 'MapController@getCoords');
+Route::get('/getCoordsJSONP', 'MapController@getCoordsJSONP');
+Route::post('/getCoords', 'MapController@getCoords');
 Route::get('/map', 'MapController@index');
