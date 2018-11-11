@@ -31,7 +31,7 @@ class DogController extends Controller
         $dog->info =    $data['info'];
         $dog->user_id = $user->id;
         $dog->save();
-        return view('home')->with(['messageForDogs' => "Собака успешно добавлена"]);
+        return redirect()->route('home');
     }
 
     public function showEditDog($id) {
