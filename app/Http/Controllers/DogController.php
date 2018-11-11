@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Dog;
+use App\Models\Walk;
 class DogController extends Controller
 {
     /**
@@ -63,14 +64,14 @@ class DogController extends Controller
         $user = Auth::user();
         $walk = new Walk;
         $walk->dog_id =    $id;
-        $walk->dt_list =     current_time('mysql');
-        $walk->dt_w_start =     $data['dt_w_start'];
+        $walk->dt_list =     date('Y-m-d H:i:s');
+        $walk->dt_w_start =     $data['d_w_start']." ".$data['t_w_start'].":00";
         $walk->dt_w_duration =     $data['dt_w_duration'];
-        $walk->dt_a_start =     current_time('mysql');
-        $walk->dt_a_finish =     current_time('mysql');
+        $walk->dt_a_start =     date('Y-m-d H:i:s');
+        $walk->dt_a_finish =     date('Y-m-d H:i:s');
         $walk->price_start =   $data['price'];
         $walk->adress =         $data['adress'];
         $walk->save();
-        return view('home')->with(['messageForDogs' => "@ гуляет"]);
+        return redirect()->route('home');
     }
 }

@@ -1,7 +1,8 @@
 
 @extends('layouts.app1')
-<link rel="stylesheet" href="css/StyleAuth.css">
+
 @section('content')
+<link rel="stylesheet" href="css/StyleAuth.css">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

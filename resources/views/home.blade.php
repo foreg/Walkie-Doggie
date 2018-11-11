@@ -76,6 +76,7 @@
                 @endif
                 @if (isset($walkDog))
                     <form action="{{ route('walkDog', $walkDog['id']) }}" method="post">
+                    @csrf
                         <fieldset>
                             <h2 class="walk">Выгулять "{{$walkDog['name']}}"</h2>
 
@@ -84,9 +85,9 @@
                                    value="{{ Auth::user()['adress'] }}">
 
                             <div class="">Дата-время начала</div>
-                            <input class="inp" style="width: 20%" id="dt_w_start" name="dt_w_start" type="date" placeholder="dt_w_start"
+                            <input class="inp" style="width: 20%" id="d_w_start" name="d_w_start" type="date" placeholder="dt_w_start"
                                    value="">
-                            <input class="inp" style="width: 10%" id="dt_w_start" name="dt_w_start" type="time" placeholder="dt_w_start"
+                            <input class="inp" style="width: 10%" id="t_w_start" name="t_w_start" type="time" placeholder="dt_w_start"
                                    value="">
 
                             <div class="">Длительность прогулки</div>
