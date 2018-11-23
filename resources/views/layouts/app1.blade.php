@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    {{--<script src="http://code.jquery.com/jquery-1.8.3.js"></script>--}}
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/map.js" type="text/javascript"></script>
     <!-- CSRF Token -->
