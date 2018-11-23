@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/walkData', 'WalkDataController@index');
+Route::get('walkData/{id}', 'WalkDataController@show');
+Route::post('walkData', 'WalkDataController@store');
+Route::put('walkData/{id}', 'WalkDataController@update');
+Route::delete('walkData/{id}', 'WalkDataController@delete');
+
+Route::get('users', 'UserController@index');
+Route::get('users/{user}', 'UserController@show');
+Route::post('users', 'UserController@store');
+Route::put('users/{user}', 'UserController@update');
+Route::delete('users/{user}', 'UserController@delete');

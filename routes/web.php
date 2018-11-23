@@ -33,6 +33,6 @@ Route::post('/walkDog/{id}', 'DogController@walkDog');
 Route::get('/walkDog/{id}', 'DogController@showWalkDog')->name('walkDog');
 
 Route::get('/getCoords', 'MapController@getCoords');
-Route::get('/getCoordsJSONP', 'MapController@getCoordsJSONP');
+//Route::get('/getCoordsJSONP', 'MapController@getCoordsJSONP');
 Route::post('/getCoords', 'MapController@getCoords');
 Route::get('/map', 'MapController@index')->name('map');
