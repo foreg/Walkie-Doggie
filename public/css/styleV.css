@@ -119,6 +119,7 @@ body {
 }
 
 .header_container_new{
+	z-index: 4;
 	display: flex;
   align-items: center;
   flex-direction: row;

@@ -13,6 +13,7 @@
 </head>
 <body>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/vue/dist/vue.js')}}"></script>
+<div id="particles-js"></div>
 <nav id="bt-menu" class="bt-menu">
     <br><br><br>
     <a href="#" class="bt-menu-trigger"><span>Меню</span></a>
@@ -34,9 +35,8 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div id="dataUser" class="PersonalData col-xs-12">
+        <div id="dataUser" class="PersonalData col-xs-offset-2 col-xs-8">
             <div v-if="showDataUser" class="dataUserr">
-                {{--<div v-if="showed">--}}
                 <form action="{{route('addProfileInfo')}}" method="post">
                     @csrf
                     <h1 class="lc">Личный кабинет</h1>
@@ -176,9 +176,6 @@
                             </form>
                     </form>
             </div>
-            {{--<div v-if="walked">--}}
-
-            {{--</div>--}}
         </div>
     </div>
 </div>
@@ -187,6 +184,8 @@
 <script src="{{asset('js/classie.js')}}"></script>
 <script src="{{asset('js/borderMenu.js')}}"></script>
 <script src="{{asset('js/Home.js')}}"></script>
+<script src="{{asset('libs/particles/particles.js')}}"></script>
+<script src="{{asset('js/ParticlesConfig.js')}}"></script>
 </body>
 </html>
 @endsection

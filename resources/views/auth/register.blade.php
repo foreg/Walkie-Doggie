@@ -5,8 +5,9 @@
 <link rel="stylesheet" href="css/StyleAuth.css">
 <div class="container">
     <div class="row justify-content-center">
+        <div id="particles-js"></div>
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mustHead">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -62,4 +63,7 @@
         </div>
     </div>
 </div>
+
+<script src="{{asset('libs/particles/particles.js')}}"></script>
+<script src="{{asset('js/ParticlesConfig.js')}}"></script>
 @endsection

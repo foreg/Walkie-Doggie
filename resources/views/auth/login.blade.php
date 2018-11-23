@@ -3,11 +3,12 @@
 
 
 @section('content')
-<link rel="stylesheet" href="css/StyleAuth.css">
+<link rel="stylesheet" href="{{asset('css/StyleAuth.css')}}">
 <div class="container">
     <div class="row justify-content-center">
+        <div id="particles-js"></div>
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mustHead">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -71,4 +72,8 @@
         </div>
     </div>
 </div>
+
+<!-- scripts -->
+<script src="{{asset('libs/particles/particles.js')}}"></script>
+<script src="{{asset('js/ParticlesConfig.js')}}"></script>
 @endsection
