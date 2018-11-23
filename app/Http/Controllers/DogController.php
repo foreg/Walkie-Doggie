@@ -35,17 +35,19 @@ class DogController extends Controller
         $dog->info =    $data['info'];
         $dog->user_id = $user->id;
         $dog->save();
-        return redirect()->route('home');
+        $dogs = User::find(Auth::user()->id)->dogs()->where('dogs.user_id', '=', Auth::user()->id)->getResults();
+        return view('dogs')->with(['dogs'=>$dogs]);
     }
 
     public function showEditDog($id) {
         $dog = Dog::find(intval($id));
-        return view('home')->with('dogInfo', $dog->getAttributes());
+        return view('editDog')->with('dogInfo', $dog->getAttributes());
     }
     public function editDog($id)
     {        
         $data = $_POST;
-        Dog::find(intval($id))->update([
+        $dog = Dog::find(intval($id));
+        $dog->update([
             'name'      => $data['name'],
             'age'       => $data['age'],
             'sex'       => $data['sex'],
@@ -53,13 +55,13 @@ class DogController extends Controller
             'size'      => $data['size'],
             'info'      => $data['info'],
         ]);
-        return redirect()->route('home')->with(['messageForDogs' => "Собака успешно сохранена"]);
+        return redirect()->route('editDog', $dog['id']);
     }
 
     public function showWalkDog($id)
     {
         $dog = Dog::find(intval($id))->getAttributes();
-        return view('home')->with('walkDog', $dog);
+        return view('addWalk')->with('walkDog', $dog);
     }
 
     public function walkDog($id)

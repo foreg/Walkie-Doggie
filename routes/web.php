@@ -30,8 +30,9 @@ Route::get('/dogs', 'DogController@showAllDogs');
 
 Route::get('/editDog/{id}', 'DogController@showEditDog')->name('editDog');
 Route::post('/editDog/{id}', 'DogController@editDog');
-Route::post('/walkDog/{id}', 'DogController@walkDog');
+
 Route::get('/walkDog/{id}', 'DogController@showWalkDog')->name('walkDog');
+Route::post('/walkDog/{id}', 'DogController@walkDog');
 
 Route::get('/getCoords', 'MapController@getCoords');
 //Route::get('/getCoordsJSONP', 'MapController@getCoordsJSONP');
