@@ -26,6 +26,7 @@ Route::post('/registerVK', 'RegisterController@createByVK');
 
 Route::get('/addDog', 'DogController@showAddDog')->name('addDog');
 Route::post('/addDog', 'DogController@addDog');
+Route::get('/dogs', 'DogController@showAllDogs');
 
 Route::get('/editDog/{id}', 'DogController@showEditDog')->name('editDog');
 Route::post('/editDog/{id}', 'DogController@editDog');

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\Dog;
 use App\Models\Walk;
+use App\User;
 class DogController extends Controller
 {
     /**
@@ -17,7 +18,10 @@ class DogController extends Controller
     {
         return view('addDog')->with(['message' => ""]);
     }
-
+    public function showAllDogs() {
+        $dogs = User::find(Auth::user()->id)->dogs()->where('dogs.user_id', '=', Auth::user()->id)->getResults();
+        return view('dogs')->with(['dogs'=>$dogs]);
+    }
     public function addDog()
     {
         $data = $_POST;

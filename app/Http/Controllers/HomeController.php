@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $dogs = User::find(Auth::user()->id)->dogs()->where('dogs.user_id', '=', Auth::user()->id)->getResults();
-        return view('home')->with(['dogs'=>$dogs]);
+        // $dogs = User::find(Auth::user()->id)->dogs()->where('dogs.user_id', '=', Auth::user()->id)->getResults();
+         return view('home');
     }
 
 }
