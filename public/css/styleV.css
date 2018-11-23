@@ -125,7 +125,8 @@ body {
 }
 
 .header__logo {
-	display: flex;
+	top: 25%;
+	left: -15%;
 	position: relative;
 	cursor: pointer;
 }
@@ -149,11 +150,11 @@ body {
 }
 
 .topnav a{
-	font-family: 'Ropa Sans Pro SC Regular';
-	color: #fff;
 	position: relative;
-	padding: 12px 15px;
-	font-size: 20pt;
+  font-family: 'Roboto', sans-serif;
+  padding: 12px 15px;
+  font-size: 22px;
+  color: #fff;
 }
 
 .topnav a:hover{
@@ -188,7 +189,7 @@ body {
 
 .container__item li{
 	font-family: 'Ropa Sans Pro SC Regular';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	opacity: 0.8;
 	text-transform: uppercase;
@@ -204,7 +205,7 @@ body {
 .container__item h2{
 	font-family: 'Ropa Sans Pro SCPTT Regular';
 	margin-top: 25px;
-	font-size: 16px;
+	font-size: 20px;
 	text-transform: uppercase;
 }
 .container__item:not(:nth-child(2)) h2:after{
@@ -284,9 +285,13 @@ body {
 	width: 18.4%;
 }
 
-.block_5 .items__h2, .block_5 .items__h2, .block_5 .items__span, .block_5 .items__column{
+.block_choose{
 	color:#fff !important;
 }
+
+.block_5 .items__span{
+	margin-bottom: 25px !important;
+} 
 
 
 .block_first h1 {
@@ -343,6 +348,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 20px;
 }
 
  .items__h2{
@@ -352,7 +358,6 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	color: #000;
 	font-family: 'Ropa Sans Pro SC Regular';
 	font-size: 34px;
 }
@@ -380,11 +385,17 @@ body {
 	width: 45%;
 }
 
+
+
 .items__row {
 	position: relative;
-	width: 110%;
+	width: 120%;
 	display: inline-flex;
 	justify-content: center;
+}
+
+.serviceRow{
+	margin-bottom: 20px;
 }
 
 .items__column {
@@ -392,6 +403,7 @@ body {
 	width: 70%;
 	flex-direction: column;
 	justify-content: center;
+	margin-bottom: 30px;
 }
 
 .godd__span{
@@ -401,24 +413,23 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 }
-.items__span{
+ .items__span{
 	margin-top: 10px;
-	font-family: 'Bebas Neue Book', sans-serif;
-	font-weight: 600;
-	font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+	font-size: 19px;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	letter-spacing: 1.5px;
 	width: 53%;
-	margin-bottom: 20px;
+	margin-bottom: 35px;
 }
 
 .row_item {
 	width: 30vw;
 	position: relative;
 	display: flex;
+	padding: 5px 12px;
 	cursor: pointer;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -441,9 +452,10 @@ body {
 	margin-left: 15px;
 }
 .span_good .good__h2{
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700px;
-	font-size: 20px;
+	  font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 
@@ -499,9 +511,10 @@ body {
 
 .zag__block{
 	position: relative;
-    top: 21%;
-    display: flex;
-    justify-content: center;
+  top: 21%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .block__span{
@@ -530,6 +543,19 @@ body {
 .offers{
 	background-color: black;
 }
+.offerMargin{
+	margin-bottom: 35px;
+}
+
+.pay button {
+  width: 120px;
+  background: #ED2553;
+  color: #fff;
+  border: 2px solid #ED2553;
+  border-radius: 5px;
+  height: 25px;
+}
+
 .offers h1{
 	text-align: center;
 	color: white;
@@ -660,8 +686,8 @@ body {
   font-size: 18px;
 }
 .thumbs .caption .pay {
-  line-height: 1.2;
-  margin-top: 5px;
+  /*line-height: 1.2;*/ 
+ margin-top: 15px;
   font-size: 12px;
 }
 .thumbs:focus:before,
@@ -692,6 +718,7 @@ body {
 .container_video{
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 20px;
 }
 
 .youtube_container .video{
@@ -740,12 +767,12 @@ body {
   width: 20%;
 }
 .container_questions{
-	margin-bottom: 50px;
+	margin-bottom: 73px;
 }
 
 .demoVue{
 	background: #fff;
-	width: 48%;
+	width: 75%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -762,21 +789,11 @@ body {
 .quest_item .h3_quest:after{
   content: "";
   display: block;
+  position: absolute;
   background: url(../img/icon2.png) no-repeat top right;
   float: right;
-  right: 0;
-  margin: -12px 9px 0 0;
-  width: 24px;
-  height: 24px;
-}
-
-.quest_item .h3_quest1:after{
-  content: "";
-  display: block;
-  background: url(../img/icon2.png) no-repeat top right;
-  float: right;
-  right: 0;
-  margin: 8px 0 0 16px !important;
+  left: 83%;
+  margin: -24px 0 0 -10px !important;
   width: 24px;
   height: 24px;
 }
@@ -784,11 +801,12 @@ body {
 .quest_item .h3_quest.pseudo:after{
   content: "";
   display: block;
+  position: absolute;
   background: url(../img/icon2.png) no-repeat top right;
   -webkit-transform: rotateX(180deg);
   float: right;
-  right: 0;
-  margin: -24px 9px 0 0;
+  left: 83%;
+  margin: -35px 0 0 -10px !important;
   width: 24px;
   height: 24px;
 }

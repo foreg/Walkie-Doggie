@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content') 
     <div class="section back">
         <div class="container block_first">
@@ -64,50 +63,6 @@
     </div>
 </div>
 
-<div class="section block_about">
-    <div class="container">
-        <div id="service" class="row">
-            <div class="col-xs-12 ">
-                <div class="container__status">
-                    <h2 class="items__h2_about">Как работает наш сервис</h2>
-                    <div class="items__row">
-                        <div class="row_item">
-                            <div class="row_circle">
-                                1
-                            </div>
-                            <div class="item__span">
-                                <h2>Зарегистрируйтесь</h2>
-                            </div>
-                            <span class="span_desc">После регистрации у вас будет возможность 
-                            разместить вашу прогулку на карту города</span>
-                        </div>
-                        <div class="row_item">
-                            <div class="row_circle">
-                                2
-                            </div>
-                            <div class="item__span">
-                                <h2>Свяжитесь с выгульщиком</h2>
-                            </div>
-                             <span class="span_desc">После размещения вашей прогулки с вами свяжется наш выгульщик и подтвердит ваш заказ. 
-                       После этого направится в указанную вами точку для того чтобы забрать на прогулку вашего питомца</span>
-                        </div>
-                        <div class="row_item">
-                            <div class="row_circle">
-                                3
-                            </div>
-                            <div class="item__span">
-                                <h2>Уделите время себе</h2>
-                            </div>
-                            <span class="span_desc">Пока наш выгульщик гуляет с вашей собакой воспользуйтесь 
-                        появившемся свободным времени на важные дела или отдых</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="section block_choose">
     <div class="container">
         <div class="row">
@@ -145,24 +100,70 @@
         </div>
     </div>
 </div>
+
+<div class="section block_about">
+    <div class="container">
+        <div id="service" class="row">
+            <div class="col-xs-12 ">
+                <div class="container__status">
+                    <h2 class="items__h2_about">Как работает наш сервис</h2>
+                    <div class="items__row serviceRow">
+                        <div class="row_item">
+                            <div class="row_circle">
+                                1
+                            </div>
+                            <div class="item__span">
+                                <h2>Зарегистрируйтесь</h2>
+                            </div>
+                            <span class="span_desc">После регистрации у вас будет возможность 
+                            разместить вашу прогулку на карту города</span>
+                        </div>
+                        <div class="row_item">
+                            <div class="row_circle">
+                                2
+                            </div>
+                            <div class="item__span">
+                                <h2>Свяжитесь с выгульщиком</h2>
+                            </div>
+                             <span class="span_desc">После размещения вашей прогулки с вами свяжется наш выгульщик и подтвердит ваш заказ. 
+                       После этого направится в указанную вами точку для того чтобы забрать на прогулку вашего питомца</span>
+                        </div>
+                        <div class="row_item">
+                            <div class="row_circle">
+                                3
+                            </div>
+                            <div class="item__span">
+                                <h2>Уделите время себе</h2>
+                            </div>
+                            <span class="span_desc">Пока наш выгульщик гуляет с вашей собакой воспользуйтесь 
+                        появившемся свободным времени на важные дела или отдых</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="section offers">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 trio">
                 <h2 class="items__h2">Наши предложения</h2>
-                <div class="col-xs-offset-1 col-xs-10">
+                <div class="offerMargin col-xs-offset-1 col-xs-10">
                     <div class=" thumbs offer o1 col-xs-4">
                             <div class="name"><h3>Первая прогулка</h3></div>
                         <div class="caption description">
                             <span class="info">Стоимость первой прогулки - 150р</span>
-                            <span class="pay"><a href="#" >Купить</a></span>
+                            <span class="pay"><button>Купить</button></span>
                         </div>
                     </div>
                     <div class="thumbs offer o2 col-xs-4">
                             <div class="name"><h3>1 прогулка</h3></div>
                         <div class="caption description">
                             <span class="info">Стоимость одной прогулки - 250р</span>
-                            <span class="pay"><a href="#" >Купить</a></span>
+                            <span class="pay"><button>Купить</button></span>
                         </div>
                     </div>
                     <div class="thumbs offer o3 col-xs-4">
@@ -171,7 +172,7 @@
                             </div>
                         <div class="caption description">
                             <span class="info">Стоимость 10 прогулок - 2000р</span>
-                            <span class="pay"><a href="#" >Купить</a></span>
+                            <span class="pay"><button>Купить</button></span>
                         </div>
                     </div>
                     
@@ -225,7 +226,7 @@
                 <h2 class="items__h2">Часто задаваемые вопросы</h2>
                 <div class="quest_item">
                     <div id="demo" class="demoVue">
-                    <h3 id="h3_item" v-on:click="show=!show" class="h3_quest1" onclick="Pseudo()">Моя собака будет гулять на поводке?</h3>
+                    <h3 id="h3_item" v-on:click="show=!show" class="h3_quest" onclick="Pseudo()">Моя собака будет гулять на поводке?</h3>
                        <transition name="fade">
                        <span id="quest1" class="quest__span" v-if='show'>Да, конечно! Мы не отпускаем собак с поводка, кроме собачьих площадок. 
                     Каждый выгульщик гуляет на специальной амуниции: страхующий ошейник, поводок и пояс,
