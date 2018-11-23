@@ -7,7 +7,8 @@
 }
 
 body  {
-    background-image: url(../img/bgCab1.jpg);
+	background-color: #000;
+    /*background-image: url(../img/bgCab1.jpg);*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -19,7 +20,7 @@ body  {
 
 
 .bt-menu {
-	z-index: 2;
+	z-index: 4;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -351,4 +352,18 @@ body  {
 /*buttons*/
 .walk{
 	margin-top: 0;
+}
+
+
+#particles-js{
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	min-height: 45rem;
+}
+.PersonalData{
+	z-index: 4;
 }
