@@ -19,15 +19,22 @@
         <div class="col-xs-12">
             <h1 class="lc">Питомцы</h1>
         </div>
-        <div class="col-xs-6">
+        
 @foreach ($dogs as $dog)
-        <p class="inp">{{$dog->name}}</p>
-        <a class="btn btn-4 btn-4a btn-dogs"
-           href="{{route('editDog', $dog->id)}}"> Редактировать </a>
-        <a class="btn btn-4 btn-4a btn-dogs"
-           href="{{route('walkDog', $dog->id)}}"> Выгулять </a>
-    @endforeach
+        <div class="dog_photo col-xs-3">
+            <img src="img/profile_start.jpg" alt="">
         </div>
+        <div class="col-xs-5">
+            <p class="inp">{{$dog->name}}</p>
+            <a class="btn btn-4 btn-4a btn-dogs"
+               href="{{route('editDog', $dog->id)}}"> Редактировать </a>
+            </div>
+        <div class="col-xs-3 main_target">
+            <a class="btn btn-4 btn-4a btn-dogs btnForA"
+           href="{{route('walkDog', $dog->id)}}"> Выгулять </a>
+        </div>
+    @endforeach
+        
     </div>
     <a class="btn btn-4 btn-4a" href="{{ route('home') }}">Назад</a>
 </div>

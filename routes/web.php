@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 })->name('landing');
 
+Route::get('/walker', function () {
+    return view('walker');
+})->name('walker');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

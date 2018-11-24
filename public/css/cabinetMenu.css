@@ -314,10 +314,7 @@ body  {
 	left: 80%;
 }
 .btn {
-
 	border:2px solid;
-
-	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
 	background: none;
@@ -356,7 +353,7 @@ body  {
 	margin-bottom: 30px;
 }
 .btn-walk{
-	margin-top: -10px;
+	margin: 0 !important;
 }
 /*buttons*/
 .walk{
@@ -424,6 +421,11 @@ body  {
 	width: 180px;
 	height:104px;
 }
+
+.aForWalk{
+	margin: 0 !important;
+}
+
 .profile_style{
 	/*display: inline-block;*/
 }
