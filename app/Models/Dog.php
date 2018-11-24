@@ -30,7 +30,7 @@ class Dog extends Eloquent
 	public $timestamps = false;
 
 	protected $casts = [
-		'sex' => 'bool',
+		//'sex' => 'bool',
 		'user_id' => 'int'
 	];
 

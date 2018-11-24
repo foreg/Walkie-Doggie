@@ -27,3 +27,9 @@ Route::get('users/{user}', 'UserController@show');
 Route::post('users', 'UserController@store');
 Route::put('users/{user}', 'UserController@update');
 Route::delete('users/{user}', 'UserController@delete');
+
+Route::get('dogs', 'DogDataController@index');
+Route::get('dogs/{dog}', 'DogDataController@show');
+Route::post('dogs', 'DogDataController@store');
+Route::put('dogs/{dog}', 'DogDataController@update');
+Route::delete('usedogsrs/{dog}', 'DogDataController@delete');
