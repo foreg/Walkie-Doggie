@@ -148,12 +148,6 @@ body {
 	height: 12vh;
 	margin-bottom: -12vh;
 }
-.logo_containerMap{
-	/*background-color: #ff413f;*/
-	z-index: 6;
-	/*height: 12vh;*/
-	/*margin-bottom: -12vh;*/
-}
 
 .header__logo img {
 	margin: 5px 0;
@@ -557,9 +551,9 @@ body {
 }
 
 .block_choose{
-	background-image: url('../img/6.jpg');
+	background-image: url('../img/walk.jpg');
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: top center;
 	background-size: cover;
 	width: 100%;
 }
@@ -875,6 +869,15 @@ body {
 	padding-left: 17px; 
 }
 
+.video img{
+	width: 235px;
+	height: 149px;
+}
+.cointainer_text a{
+	display: flex;
+	justify-content: center;
+}
+
 .form-check{
 	padding-left: 0.15rem !important;
 }
@@ -916,8 +919,14 @@ body {
 	background: #fff;
 }
 .buttonA-4:hover {
-	background: #ED2553;
 	color: #fff;
+	background: #ED2553;
+}
+
+.buttonA-4:active {
+	border: none;
+	color: #cdcdcd;
+	background: #ED2553;
 }
 
 .dog_photo{
@@ -929,7 +938,7 @@ body {
 	height:104px;
 }
 .buttonA, .btnForA{
-	width: 15%;
+	width: 20%;
 	border:2px solid;
 	font-size: inherit;
 	color: inherit;
@@ -968,4 +977,16 @@ body {
 	justify-content: center;
 	width: 75%;
   height: 48px;
+}
+
+.span_company{
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 35px;
 }

@@ -3,18 +3,50 @@ body{
 }
 #map {
     width: 100%;
-    height:100%;
+    height:100vh;
     display: flex;
     position: relative;
+}
+/*.py-4{*/
+	/*padding-bottom: 0!important;*/
+/*}*/
+.forInstruction{
+	width: 100%;
+	height: 50px;
+}
+.instruction{
+	background-color: #fff;
+	border: 5px outset #ff4764;
+	border-right: 0px;
+	/*-moz-border-radius-topleft: 50px ;*/
+	padding: 3px;
+	margin-bottom: 5px;
+	display: block;
+	max-width: 300px;
+	min-width: 60px;
+	position: fixed;
+	right: 0px;
+	top: 60px;
+	width: 20%;
+	z-index: 2;
 }
 
 .logo_container{
 		max-width: 100% !important;
-		margin: 0 !important;
+		height: 5vw !important;
+		margin-bottom: -5vw !important;
 		padding: 0 !important;
 		width: 100% !important;
 		position: absolute;
 		background: rgba(0,0,0,0.4) !important;
+}
+.logo_containerMap{
+	max-width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+	position: absolute;
+	background: rgba(176, 47, 71, 0.61) !important;
 }
 
 .topnav a:hover{
@@ -23,13 +55,6 @@ body{
 
 .header__logo{
 	margin-left: 5%;
-}
-
-.logo_container{
-	background-color: #000;
-	z-index: 999;
-	height: 8vh !important;
-	margin-bottom: -8vh !important;
 }
 
 
@@ -48,7 +73,7 @@ body{
 }
 
 .py-4{
-	background: #f7f7f7;
+	background: #000000;
 }
 
 .info__spans{

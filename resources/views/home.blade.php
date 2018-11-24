@@ -14,7 +14,7 @@
 <body>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/vue/dist/vue.js')}}"></script>
 <div id="particles-js"></div>
-<div class="container">
+<div class="container profile">
     <div class="row">
         <div id="dataUser" class="PersonalData col-xs-12">
             {{--<div v-if="showDataUser" class="dataUserr">--}}
@@ -53,20 +53,18 @@
         </div>
         <div id="addPet" class="col-xs-12 Pets">
             <h1 class="lc">Питомцы</h1>
-            <div v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false" class="addPet Pet col-xs-offset-2 col-xs-3">
+            {{--v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false"--}}
+            <div class="addPet Pet col-xs-offset-2 col-xs-3">
                 <a href="{{route('addDog')}}"><img src="img/plus.png" alt=""></a>
                 <nav class="cl-effect-1">
-                    <transition name="fade">
-                        <a v-show="upHere" href="{{route('addDog')}}">Добавить</a>
-                    </transition>
+                        {{--v-show="upHere"--}}
+                        <a  href="{{route('addDog')}}">Добавить</a>
                 </nav>
             </div>
-            <div v-on:mouseover="upHere1 = true" v-on:mouseleave="upHere1 = false" class="watchPet Pet col-xs-offset-3 col-xs-3">
+            <div class="watchPet Pet col-xs-offset-3 col-xs-3">
                 <a href="{{route('allDogs')}}"> <img src="img/pets.png" alt=""> </a>
                 <nav class="cl-effect-1">
-                    <transition name="fade">
-                        <a v-show="upHere1" href="{{route('allDogs')}}">Просмотреть</a>
-                    </transition>
+                        <a href="{{route('allDogs')}}">Просмотреть</a>
                 </nav>
             </div>
         </div>
@@ -74,7 +72,21 @@
 
         {{--</div>--}}
         <div class="col-xs-12 dogwalkers">
-
+            <h1 class="lc">Работа</h1>
+            {{--v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false"--}}
+            <div class="addPet Pet col-xs-offset-2 col-xs-3">
+                <a href="{{route('addDog')}}"><img src="img/map.png" alt=""></a>
+                <nav class="cl-effect-1">
+                    {{--v-show="upHere"--}}
+                    <a  href="{{route('map')}}">Взять заказ</a>
+                </nav>
+            </div>
+            <div class="watchPet Pet col-xs-offset-3 col-xs-3">
+                <a href="{{route('allDogs')}}"> <img src="img/stats.png" alt=""> </a>
+                <nav class="cl-effect-1">
+                    <a href="#">Статистика</a>
+                </nav>
+            </div>
         </div>
         <div class="col-xs-12 contacts">
 

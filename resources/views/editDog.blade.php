@@ -28,7 +28,7 @@
                     <div class="profile_text">Информация</div> <input class="inp" id="info" name="info" type="text"  value = "{{$dogInfo['info']}}" placeholder="info">
                 </div>
                 <div class="">
-                    <div class="">&nbsp;&nbsp;</div><a class="btn btn-4 btn-4a" href="{{ route('home') }}">Назад</a>
+                    <div class="">&nbsp;&nbsp;</div><a class="btn btn-4 btn-4a" href="{{ route('allDogs') }}">Назад</a>
                     <input class="btn btn-4 btn-4a" name="addDog" type="submit" value="Сохранить">
                 </div>
             </fieldset>
