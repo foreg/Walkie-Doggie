@@ -1,7 +1,5 @@
 @extends('layouts.app1')
 
-
-
 @section('content')
 <link rel="stylesheet" href="{{asset('css/StyleAuth.css')}}">
 <div class="container">

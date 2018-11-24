@@ -10,7 +10,8 @@ body{
 
 .logo_container{
 		max-width: 100% !important;
-		margin: 0 !important;
+		height: 5vw !important;
+		margin-bottom: -5vw !important;
 		padding: 0 !important;
 		width: 100% !important;
 		position: absolute;
@@ -23,13 +24,6 @@ body{
 
 .header__logo{
 	margin-left: 5%;
-}
-
-.logo_container{
-	background-color: #000;
-	z-index: 999;
-	height: 8vh !important;
-	margin-bottom: -8vh !important;
 }
 
 

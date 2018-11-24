@@ -17,7 +17,9 @@
             <div class="col-xs-12 block_4">
                 <h2 class="items__h2">Почему мы вам нужны</h2>
                 <span class="items__span">Нередко бывают ситуации, когда мы не можем погулять с собакой:
-                Вы владелец собаки, и нередко бывают ситуации, когда некому погулять с питомцем?</span>
+                Вы владелец собаки, и нередко бывают ситуации, когда некому погулять с питомцем?
+                Или, может быть, 
+                вы заинтересованы в выгуле питомцев и хотите стать волкером (от англ. Walk – гулять)?</span>
             <div class="container__items">
                 <div class="items__row">
                     <div class="row_item">
@@ -54,8 +56,7 @@
                          подработку связанную с заботой о них, то у нас есть для вас вакансия</span>
                         </div> -->
                 </div>
-                <span class="items__span">Или, может быть, 
-                вы заинтересованы в выгуле питомцев и хотите стать волкером (от англ. Walk – гулять)?</span>
+               <!--  <span class="items__span"></span>
                 <div class="items__row">
                     <div class="row_item">
                     <img src="{{ asset('img/heal.png') }}">
@@ -83,7 +84,7 @@
                         <span class="span_desc">Думаете над идеей завести своего собственного питомца, но
                         сомневаетесь? Наш сервис поможет вам определиться, сможете ли справляться со
                         своим, возможно будущим, любимцем</span>
-                    </div>
+                    </div> -->
                <!--  <div class="row_item">
                     <img src="{{ asset('img/dog.png') }}">
                     <div class="item__span">
@@ -216,7 +217,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section youtube_reviewsSection">
     <div class="container">
         <div id="rewiews" class="row">
             <div class="col-xs-12 ">
@@ -245,6 +246,27 @@
                                 очень вежливый выгульщик.
                             </span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="join_container">
+                    <h2 class="items__h2">Хотите стать волкером?</h2>
+                    <div class="cointainer_text">
+                        <span class="text_info">Если вы чувствуете в себе силы и желание помогать животным,
+                        хотите работать в дружном коллективе и без обязательных часов отработки, то мы ждем
+                        именно вас! Пройдите наше обучение и станьте профессиональным волкером.
+                        </span>
+                        <a href="{{ route('walker') }}" class="buttonA buttonA-4 btn-4a">
+                            Узнать больше
+                        </a>
                     </div>
                 </div>
             </div>
