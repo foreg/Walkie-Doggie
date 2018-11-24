@@ -132,6 +132,16 @@ body {
 	cursor: pointer;
 }
 
+.header__logo1{
+	cursor: pointer;
+}
+
+.header__logo1 img {
+	margin: 5px 0;
+	width: 69px;
+	height: 29px;
+}
+
 .logo_container{
 	background-color: #000;
 	z-index: 999;
@@ -422,7 +432,7 @@ body {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	width: 53%;
+	width: 70%;
 	margin-bottom: 35px;
 }
 
@@ -431,10 +441,14 @@ body {
 	position: relative;
 	display: flex;
 	padding: 5px 12px;
-	cursor: pointer;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+}
+
+.row_item h2 {
+	font-size: 23px !important;
+	font-weight: 600;	
 }
 
 .row_item_1 {

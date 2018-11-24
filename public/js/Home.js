@@ -50,10 +50,10 @@
 //         addPet:this.dataUs.addPet,
 //     }
 // });
-new Vue({
-    el:'#addPet',
-    data : {
-        upHere : false,
-        upHere1 :false
-    }
-});
+// new Vue({
+//     el:'#addPet',
+//     data : {
+//         upHere  :false,
+//         upHere1 :false
+//     }
+// });
