@@ -7,6 +7,7 @@
 }
 
 body  {
+
 	background-color: #000;
     /*background-image: url(../img/bgCab1.jpg);*/
 	background-repeat: no-repeat;
@@ -357,13 +358,170 @@ body  {
 
 #particles-js{
 	z-index: 1;
-	width: 100%;
+	width: 99%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	min-height: 45rem;
+	height: 99%;
+	/*min-height: 45rem;*/
 }
 .PersonalData{
+    z-index: 4;
+    color: #0f0f0f;
+	border-radius: 30px 30px 0 0;
+	background: linear-gradient(180deg, #EECFBA, #C5DDE8);
+	padding-bottom: 30px;
+
+}
+.add{
+    border-radius: 30px 30px 30px 30px;
+}
+.dogs{
+    z-index: 4;
+    color: #0f0f0f;
+    border-radius: 30px 30px 30px 30px;
+    background: linear-gradient(180deg, #EECFBA, #C5DDE8);
+    padding-bottom: 30px;
+}
+.PersonalData fieldset{
+	margin-top: 50px;
+}
+.profile_info img{
+	width: 180px;
+	height:104px;
+}
+.profile_style{
+	/*display: inline-block;*/
+}
+.Pets{
 	z-index: 4;
+	color: #000;
+	background: linear-gradient(180deg, #C5DDE8, #EECFBA);
+	height: 400px;
+}
+.addPet{
+	z-index:6;
+	background-color: #56586e;
+	width:230px;
+	height:250px;
+	margin-top: 40px;
+	line-height:12px;
+	border-radius:9px;
+	padding:10px;
+	position:relative;
+	transition: all 0.9s ease;
+	opacity:1;
+	display: block;
+	text-align: center;
+}
+
+.addPet img{
+	margin-top: 40px;
+	width: 100px;
+	height: 100px;
+}
+.watchPet{
+	z-index:6;
+	background-color: #56586e;
+	width:230px;
+	height:250px;
+	margin-top: 40px;
+	line-height:12px;
+	border-radius:9px;
+	padding:10px;
+	position:relative;
+	transition: all 0.9s ease;
+	opacity:1;
+	display: block;
+	text-align: center;
+}
+
+.watchPet img{
+	margin-top: 40px;
+	width: 100px;
+	height: 100px;
+}
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+	opacity: 0;
+}
+
+nav a {
+	margin-top: 60px;
+	position: relative;
+	display: block;
+	/*align-content: center;*/
+	/*align-items: center;*/
+	text-align: center;
+	/*margin: 15px 25px;*/
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Эффект 1: Скобки */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+.cl-effect-1 a:hover{
+	color: red;
+}
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+/*.game{*/
+	/*height: 500px;*/
+/*}*/
+.head{
+	padding: 20px 0 0 20px;
+}
+.knop{
+	padding: 0 0 0 20px;
+}
+.main{
+    z-index: 4;
+}
+.doggie{
+    margin-top: 25px;
+    margin-left: -50px;
+
+    /*display: inline-flex;*/
 }
