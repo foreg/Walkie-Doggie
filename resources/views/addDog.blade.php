@@ -8,13 +8,13 @@
     <link rel="stylesheet"
           href="{{asset('http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('css/cabinetMenu.css') }}"/>
-    <script src="js/modernizr.custom.js"></script>
+    <script src="{{asset('js/modernizr.custom.js')}}"></script>
 </head>
 <body>
+<div id="particles-js"></div>
 <div class="main">
     <div class="container">
-        <div id="particles-js"></div>
-        <div class="PersonalData">
+        <div class="PersonalData add">
             <form action="{{route('addDog')}}" method="post">
                 @csrf
                 <h1 class="head">Добавление собаки</h1>

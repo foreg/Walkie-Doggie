@@ -13,18 +13,30 @@
 </head>
 <body>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/vue/dist/vue.js')}}"></script>
-<div class="container">
-    @foreach ($dogs as $dog)
+<div id="particles-js"></div>
+<div class="container dogs">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="lc">Питомцы</h1>
+        </div>
+@foreach ($dogs as $dog)
+    <div class="col-xs-offset-2 col-xs-5">
         <p class="inp">{{$dog->name}}</p>
         <a class="btn btn-4 btn-4a btn-dogs"
            href="{{route('editDog', $dog->id)}}"> Редактировать </a>
+    </div>
+    <div class="doggie col-xs-5">
         <a class="btn btn-4 btn-4a btn-dogs"
            href="{{route('walkDog', $dog->id)}}"> Выгулять </a>
+    </div>
     @endforeach
+    </div>
 </div>
 <script src="{{asset('js/classie.js')}}"></script>
 <script src="{{asset('js/borderMenu.js')}}"></script>
 <script src="{{asset('js/Home.js')}}"></script>
+<script src="{{asset('libs/particles/particles.js')}}"></script>
+<script src="{{asset('js/ParticlesConfig.js')}}"></script>
 </body>
 </html>
 @endsection
