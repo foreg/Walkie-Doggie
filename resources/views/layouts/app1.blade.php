@@ -12,6 +12,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
@@ -31,7 +32,7 @@
         <div class="container logo_container notIndex">
             <div class="row">
                 <div class="col-xs-12 header_container_new">
-                    <div class="header__logo col-xs-1" onclick="window.location='{{ url('/') }}'"><img class="img_logo" src="{{asset('img/logo.png')}}" alt="logo"></div>
+                    <div class="header__logo1 col-xs-1" onclick="window.location='{{ url('/') }}'"><img class="img_logo" src="{{asset('img/logo.png')}}" alt="logo"></div>
                 <div class="topnav col-xs-7" id="menuTopnav">
                     <a href="{{ route('landing') }}">Главная</a>
                     </div>  

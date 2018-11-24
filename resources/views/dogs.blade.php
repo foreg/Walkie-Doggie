@@ -19,18 +19,17 @@
         <div class="col-xs-12">
             <h1 class="lc">Питомцы</h1>
         </div>
+        <div class="col-xs-6">
 @foreach ($dogs as $dog)
-    <div class="col-xs-offset-2 col-xs-5">
         <p class="inp">{{$dog->name}}</p>
         <a class="btn btn-4 btn-4a btn-dogs"
            href="{{route('editDog', $dog->id)}}"> Редактировать </a>
-    </div>
-    <div class="doggie col-xs-5">
         <a class="btn btn-4 btn-4a btn-dogs"
            href="{{route('walkDog', $dog->id)}}"> Выгулять </a>
-    </div>
     @endforeach
+        </div>
     </div>
+    <a class="btn btn-4 btn-4a" href="{{ route('home') }}">Назад</a>
 </div>
 <script src="{{asset('js/classie.js')}}"></script>
 <script src="{{asset('js/borderMenu.js')}}"></script>

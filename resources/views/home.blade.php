@@ -1,7 +1,7 @@
 @extends('layouts.app1')
 
 @section('content')
-        <!doctype html>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -27,18 +27,18 @@
                             <img src="img/profile_start.jpg" alt="">
                         </div>
                         <div class="profile_style col-xs-3">
-                            <div class="">Ваше имя</div>
+                            <div class="profile_text">Ваше имя</div>
                             <input class="inp" id="name" name="name" type="text" placeholder=""
                                    value='{{Auth::user()->name}}'>
-                            <div class="">Телефон</div>
+                            <div class="profile_text">Телефон</div>
                             <input class="inp" id="phone" name="phone" type="text" placeholder="+79224789108"
                                    value='{{Auth::user()->phone}}'>
                         </div>
                         <div class="col-xs-6">
-                            <div class="">Адрес</div>
+                            <div class="profile_text">Адрес</div>
                             <input class="inp" id="adress" name="adress" type="text" placeholder=""
                                    value='{{Auth::user()->adress}}'>
-                            <div class="">Инфо</div>
+                            <div class="profile_text">Инфо</div>
                             <input class="inp" id="info" name="info" type="text" placeholder=""
                                    value='{{Auth::user()->info}}'>
                         </div>
@@ -54,7 +54,7 @@
         <div id="addPet" class="col-xs-12 Pets">
             <h1 class="lc">Питомцы</h1>
             <div v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false" class="addPet Pet col-xs-offset-2 col-xs-3">
-                <img src="img/plus.png" alt="">
+                <a href="{{route('addDog')}}"><img src="img/plus.png" alt=""></a>
                 <nav class="cl-effect-1">
                     <transition name="fade">
                         <a v-show="upHere" href="{{route('addDog')}}">Добавить</a>
@@ -62,7 +62,7 @@
                 </nav>
             </div>
             <div v-on:mouseover="upHere1 = true" v-on:mouseleave="upHere1 = false" class="watchPet Pet col-xs-offset-3 col-xs-3">
-                <img src="img/pets.png" alt="">
+                <a href="{{route('allDogs')}}"> <img src="img/pets.png" alt=""> </a>
                 <nav class="cl-effect-1">
                     <transition name="fade">
                         <a v-show="upHere1" href="{{route('allDogs')}}">Просмотреть</a>
