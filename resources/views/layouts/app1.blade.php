@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/map.js" type="text/javascript"></script>
+    <script src="{{asset('http://code.jquery.com/jquery-1.8.3.js')}}"></script>
+    <script src="{{asset('https://api-maps.yandex.ru/2.1/?lang=ru_RU')}}" type="text/javascript"></script>
+    <script src="{{asset('js/map.js')}}" type="text/javascript"></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
