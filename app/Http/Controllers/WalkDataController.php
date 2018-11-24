@@ -16,7 +16,7 @@ class WalkDataController extends Controller
            "type" => "FeatureCollection", 
             "features" => array(),
         );
-        $allWalks = Walk::where('dt_w_start', '>', date('Y-m-d H:i:s'))->get();
+        $allWalks = Walk::where('dt_w_start', '>', date('Y-m-d H:i:s'))->whereNull('last_bet_id')->get();
         foreach ($allWalks as $walk) {
             $adress = urlencode($walk->adress);
             $response = file_get_contents("https://geocode-maps.yandex.ru/1.x/?geocode=$adress");
@@ -52,7 +52,7 @@ class WalkDataController extends Controller
                 ], 
                 "properties"=>[
                     "balloonContentHeader"=>"<div class='info_h1'><h1>Кличка собаки: ".Dog::find($walk->dog_id)->name."</h1></div>", 
-                    "balloonContentBody"=>"<div class='info__spans'><span>Время создания заявки: ".$dateCreate."</span><span>Время взятия заявки: ".$dateTake."</span><span>Длительность прогулки: ".$walk->dt_w_duration." мин</span><span>Время начала аукциона: ".$dateAuckCreate."</span><span>Время конца аукциона: ".$dateAuckFinish."</span><span>Начальная цена прогулки: ".$walk->price_start." руб.</span><span>Адресс клиента: ".$walk->adress."</span><span><input type='button' placeholder='fh' name=".$walk->id." value='взять' onclick='onButtonTakeClick(this)'></input></span></div>", 
+                    "balloonContentBody"=>"<div class='info__spans'><span>Время создания заявки: ".$dateCreate."</span><span>Время взятия заявки: ".$dateTake."</span><span>Длительность прогулки: ".$walk->dt_w_duration." мин</span><span>Время начала аукциона: ".$dateAuckCreate."</span><span>Время конца аукциона: ".$dateAuckFinish."</span><span>Начальная цена прогулки: ".$walk->price_start." руб.</span><span>Адресс клиента: ".$walk->adress."</span><span><input type='button' placeholder='fh' name=".$walk->id." value='взять' id='takeBTN'></input></span></div>", 
                     "clusterCaption"=>"<h4>".Dog::find($walk->dog_id)->name."</h4>"
                 ]
             ]);
@@ -94,5 +94,30 @@ class WalkDataController extends Controller
         $article->delete();
 
         return response()->json(null, 204);
+    }
+    public function GetUsersWalksAsOwner($id)
+    {
+        $id = ($user = User::where('vkId', $id)-> first())->id;
+        $walks = Walk::whereIn('dog_id', Dog::where('user_id', $id)->pluck('id'))->leftJoin('dogs', 'walks.dog_id', '=', 'dogs.id' )->get();
+
+        return response()->json($walks, 200);
+    }
+
+    public function GetUsersWalksAsWalker($id)
+    {
+        $id = ($user = User::where('vkId', $id)-> first())->id;
+        $walks = Walk::where('last_bet_id', $id)->leftJoin('dogs', 'walks.dog_id', '=', 'dogs.id' )->get();
+
+        return response()->json($walks, 200);
+    }
+
+    public function SetWalker(Request $request)
+    {
+        $data = $request->all();
+        $walk = $data["walk"];
+        $id = ($user = User::where('vkId', $data['id'])-> first())->id;
+        Walk::find($walk)->update(['last_bet_id' => $id]);
+
+        return response()->json(null, 200);
     }
 }
