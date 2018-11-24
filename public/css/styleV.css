@@ -148,6 +148,12 @@ body {
 	height: 12vh;
 	margin-bottom: -12vh;
 }
+.logo_containerMap{
+	/*background-color: #ff413f;*/
+	z-index: 6;
+	/*height: 12vh;*/
+	/*margin-bottom: -12vh;*/
+}
 
 .header__logo img {
 	margin: 5px 0;
