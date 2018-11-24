@@ -175,9 +175,7 @@
                             <span class="pay"><button>Купить</button></span>
                         </div>
                     </div>
-                    
                 </div>
-               
             </div>
         </div>
     </div>

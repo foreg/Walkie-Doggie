@@ -29,12 +29,12 @@ body{
 }
 #particles-js{
     z-index: 1;
-    width: 100%;
+    width: 99%;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    min-height: 45rem;
+    height: 99%;
+    /*min-height: 45rem;*/
 }
 .mustHead{
     margin-top: 100px;
