@@ -110,7 +110,7 @@ body {
 }
 
 .back{
-	background-image: url(../img/bg.jpg);
+	background-image: url(../img/test1.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -126,8 +126,8 @@ body {
 }
 
 .header__logo {
-	top: 25%;
-	left: -15%;
+	top: 22%;
+	left: -7.6%;
 	position: relative;
 	cursor: pointer;
 }
@@ -294,6 +294,14 @@ body {
 	margin-top: 8px;
 	border-bottom: 3px solid #ED2553;
 	width: 18.4%;
+}
+
+.white{
+	background: #fff;
+}
+
+.gray{
+	background: #f7f7f7
 }
 
 .block_choose{
@@ -546,7 +554,7 @@ body {
 }
 
 .block_about{
-	background: #fff;
+	/*background: #fff;*/
 	margin-bottom: 40px;
 }
 
@@ -558,9 +566,6 @@ body {
 	width: 100%;
 }
 
-.bgc2{
-	background-color: #f7f7f7;
-}
 .offers{
 	background-color: black;
 }
@@ -897,9 +902,9 @@ body {
   width: 24px;
   height: 24px;
 }
-.youtube_reviewsSection{
+/*.youtube_reviewsSection{
 	background: #f7f7f7;
-}
+}*/
 
 .fade-enter-active, .fade-leave-active { 
 	transition: opacity .5s; 
@@ -989,4 +994,25 @@ body {
   text-align: center;
   width: 70%;
   margin-bottom: 35px;
+}
+
+.youtube_container .items__h2{
+	margin-top: 50px !important;
+}
+.row_item .manWidth{
+	margin-bottom: -20px;
+  width: 117px !important;
+}
+.manRow{
+	position: relative;
+  top: -28.5px;
+}
+
+.row_item .dogWidth{
+	margin-bottom: -17px;
+  width: 199px !important;
+}
+.dogRow{
+	position: relative;
+  top: -6.5px;
 }

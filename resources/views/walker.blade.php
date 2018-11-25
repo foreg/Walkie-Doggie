@@ -11,17 +11,18 @@
         </div>
     </div>
 </div>
-<div class="section block_about">
+<div class="section block_about white">
     <div class="container">
         <div id="about" class="row">
             <div class="col-xs-12">
                 <div class="container__status">
-                    <h2 class="items__h2_about">О нашей компании</h2>
+                    <h2 class="items__h2_about">О нашем сервисе</h2>
                     <div class="span_company">
                        <span class="aboutCompany">
-                        Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit. Praesent quis imperdiet libero. In sed mi at dolor semper euismod. Pellentesque tincidunt odio nec varius consectetur. Integer hendrerit condimentum elit, ac blandit tellus tristique ut. 
-                        Vestibulum consectetur condimentum bibendum
+                        Walkie-Doggie - ваш личный помощник в вопросах 
+                        прогулки с вашим питомцем
+                        Сервис "Walkie-Doggie" предлагает отличную возможность для подработки волкерам
+                        и решение для клиентов, которые не могут выкроить время на питомца. 
                        </span>
                     </div>
                 </div>
@@ -29,7 +30,7 @@
         </div>
     </div>
 </div>      
-<div class="section bgc2">
+<div class="section gray">
     <div class="container">
         <div id="job" class="row">
             <div class="col-xs-12 block_4">
@@ -38,31 +39,30 @@
             <div class="container__items">
                 <div class="items__row">
                     <div class="row_item">
-                    <img src="{{ asset('img/heal.png') }}">
-                        <div class="item__span">
-                            <h2>Работа с животными</h2>
-                        </div>
-                    <span class="span_desc">Если вы, также как и мы, любите животных,
-                    то вам обязатялено понравится данная профессия, большую часть
-                    времени вы будете уделять питомцам</span>
+                        <img src="{{ asset('img/lapa.png') }}">
+                            <div class="item__span">
+                                <h2>Работа с животными</h2>
+                            </div>
+                        <span class="span_desc">Благодаря нашему сервису вы можете проводить время с питомцами, 
+                        что поможет не только отдохнуть от насущных проблем, 
+                        но и весело провести время.</span>
                     </div>
-                    <div class="row_item">
-                        <img src="{{ asset('img/zzz.png') }}">
+                    <div class="row_item manRow">
+                        <img src="{{ asset('img/man.png') }}" class="manWidth">
                         <div class="item__span">
-                            <h2>Дружный коллектив</h2>
+                            <h2>Взвешенный подход</h2>
                         </div>
-                        <span class="span_desc">Наша команда была отобрана по строгим критериям, 
-                        включающие в себя, как личностные качества, так и профессиональные навыки
-                        работы с животными. С нами можно многому научиться!</span>
+                        <span class="span_desc">Если вы не уверены, что готовы завести питомца, 
+                        начните выгуливать чужих собак, чтобы оценить свои возможности</span>
                     </div>
-                    <div class="row_item">
-                        <img src="{{ asset('img/case.png') }}">
+                    <div class="row_item dogRow">
+                        <img src="{{ asset('img/sobaka.png') }}" class="dogWidth">
                         <div class="item__span">
                             <h2>Отличная подработка</h2>
                         </div>
-                        <span class="span_desc">Вам необязательно работать у нас определенное кол-во часов
-                        , каждый волкер сам себе начальник. Также для волкеров, которые хорошо отличаются
-                        в месяце предусмотрены различные поощрения</span>
+                        <span class="span_desc">Необязательно работать определенное количество часов,
+                        каждый волкер сам себе начальник. 
+                        Так же, для отличившихся волкеров предусмотрены поощрения.</span>
                     </div>
                 </div>
                 
@@ -82,28 +82,26 @@
                     <div class="row_item_1">
                         <img src="{{ asset('img/1.svg') }}" alt="">
                         <div class="span_good">
-                            <h2 class="good__h2">1 предложение</h2>
-                            <span class="good__span">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero. In sed mi at dolor semper euismod. Pellentesque tincidunt odio nec varius consectetur. Integer hendrerit condimentum elit, ac blandit tellus tristique ut. 
-                            Vestibulum consectetur condimentum bibendum</span>
+                            <h2 class="good__h2">Динамическая заработная плата</h2>
+                            <span class="good__span">Вы получите ровно столько денег, 
+                            сколько сами заработали. Чем больше прогулок - тем выше заработок</span>
                         </div>
                     </div>
                      <div class="row_item_1">
                         <img src="{{ asset('img/2.svg') }}" alt="">
                         <div class="span_good">
-                            <h2 class="good__h2">2 предложение</h2>
-                            <span class="good__span">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero. In sed mi at dolor semper euismod. Pellentesque tincidunt odio nec varius consectetur. Integer hendrerit condimentum elit, ac blandit tellus tristique ut. 
-                            Vestibulum consectetur condimentum bibendum</span>
+                            <h2 class="good__h2">Свободный график</h2>
+                            <span class="good__span">У нас нет обязательных часов отработки,
+                            работайте столько сколько захотите</span>
                         </div>
                     </div>
                      <div class="row_item_1">
                         <img src="{{ asset('img/4.svg') }}" alt="">
                         <div class="span_good">
-                            <h2 class="good__h2">3 предложение</h2>
-                            <span class="good__span">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero. In sed mi at dolor semper euismod. Pellentesque tincidunt odio nec varius consectetur. Integer hendrerit condimentum elit, ac blandit tellus tristique ut. 
-                            Vestibulum consectetur condimentum bibendum</span>
+                            <h2 class="good__h2">Обучение</h2>
+                            <span class="good__span">Наш сервис предлагает всем желающим стать
+                            профессональным волкером. Вас будет обучать преподаватель с опытом
+                            работы с животными</span>
                         </div>
                     </div>
                 </div>
@@ -112,7 +110,7 @@
     </div>
 </div>
 
-<div class="section block_about">
+<div class="section block_about gray">
     <div class="container">
         <div id="service" class="row">
             <div class="col-xs-12 ">
@@ -124,30 +122,29 @@
                                 1
                             </div>
                             <div class="item__span">
-                                <h2>Lorem ipsum</h2>
+                                <h2>Принять заказ</h2>
                             </div>
-                            <span class="span_desc">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero.</span>
+                            <span class="span_desc">Выберите собаку, с которой хотите погулять,
+                            и подтвердите заказ</span>
                         </div>
                         <div class="row_item">
                             <div class="row_circle">
                                 2
                             </div>
                             <div class="item__span">
-                                <h2>Lorem ipsum</h2>
+                                <h2>Начать прогулку</h2>
                             </div>
-                            <span class="span_desc">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero</span>
+                            <span class="span_desc">Заберите собаку в месте, 
+                            указанном владельцем и погуляйте с ней</span>
                         </div>
                         <div class="row_item">
                             <div class="row_circle">
                                 3
                             </div>
                             <div class="item__span">
-                                <h2>Lorem ipsum</h2>
+                                <h2>Верните собаку владельцу</h2>
                             </div>
-                            <span class="span_desc">Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero.</span>
+                            <span class="span_desc">Передайте собаку владельцу и получите вознаграждение за прогулку</span>
                         </div>
                     </div>
                 </div>
@@ -192,7 +189,7 @@
     </div>
 </div> -->
 
-<div class="section youtube_reviewsSection">
+<div class="section white">
     <div class="container">
         <div id="walkers" class="row">
             <div class="col-xs-12 ">
@@ -205,8 +202,8 @@
                                 Дмитрий Строков
                             </h2>
                             <span class="youtube__span">
-                                Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero.
+                            Люблю собак, но завести свою не позволяет жилплощадь.
+                            Благодаря сервису могу проводить с ними много времени
                             </span>
                         </div>
                         <div class="video">
@@ -215,8 +212,8 @@
                                 Даниил Жилин
                             </h2>
                             <span class="youtube__span">
-                               Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Praesent quis imperdiet libero.
+                            Мне как студенту подходит подработка - гуляю с собаками до и после занятий. 
+                            Радует, что нет проблем с начальством во время сессии, просто не беру заказы
                             </span>
                         </div>
                     </div>
@@ -226,7 +223,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section gray">
     <div class="container">
         <div id="request" class="row">
             <div class="col-xs-12">
