@@ -46,6 +46,9 @@
                     <div class="">
                         <div class="">&nbsp;&nbsp;</div>
                         <input class="btn btn-4 btn-4a" name="addProfileInfo" type="submit" value="Сохранить">
+                        @if (!$isWalker)
+                        <a class="btn btn-4 btn-4a" href="#">Записаться на курсы</a>
+                        @endif
                     </div>
                 </fieldset>
             </form>
@@ -71,6 +74,7 @@
         {{--<div class="col-xs-12 game">--}}
 
         {{--</div>--}}
+        @if ($isWalker)
         <div class="col-xs-12 dogwalkers">
             <h1 class="lc">Работа</h1>
             {{--v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false"--}}
@@ -88,6 +92,7 @@
                 </nav>
             </div>
         </div>
+        @endif
         <div class="col-xs-12 contacts">
 
         </div>
