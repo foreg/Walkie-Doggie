@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $dogs = User::find(Auth::user()->id)->dogs()->where('dogs.user_id', '=', Auth::user()->id)->getResults();
         $user = User::find(Auth::user()->id);
         $res = false;
         if ($user->rights == 1) {
