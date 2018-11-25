@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="section block_about">
+<div class="section block_about white">
     <div class="container">
         <div id="about" class="row">
             <div class="col-xs-12">
@@ -29,7 +29,7 @@
         </div>
     </div>
 </div>      
-<div class="section bgc2">
+<div class="section gray">
     <div class="container">
         <div id="job" class="row">
             <div class="col-xs-12 block_4">
@@ -38,31 +38,30 @@
             <div class="container__items">
                 <div class="items__row">
                     <div class="row_item">
-                    <img src="{{ asset('img/heal.png') }}">
-                        <div class="item__span">
-                            <h2>Работа с животными</h2>
-                        </div>
-                    <span class="span_desc">Если вы, также как и мы, любите животных,
-                    то вам обязатялено понравится данная профессия, большую часть
-                    времени вы будете уделять питомцам</span>
+                        <img src="{{ asset('img/lapa.png') }}">
+                            <div class="item__span">
+                                <h2>Работа с животными</h2>
+                            </div>
+                        <span class="span_desc">Благодаря нашему сервису вы можете проводить время с питомцами, 
+                        что поможет не только отдохнуть от насущных проблем, 
+                        но и весело провести время.</span>
                     </div>
-                    <div class="row_item">
-                        <img src="{{ asset('img/zzz.png') }}">
+                    <div class="row_item manRow">
+                        <img src="{{ asset('img/man.png') }}" class="manWidth">
                         <div class="item__span">
-                            <h2>Дружный коллектив</h2>
+                            <h2>Взвешенный подход</h2>
                         </div>
-                        <span class="span_desc">Наша команда была отобрана по строгим критериям, 
-                        включающие в себя, как личностные качества, так и профессиональные навыки
-                        работы с животными. С нами можно многому научиться!</span>
+                        <span class="span_desc">Если вы не уверены, что готовы завести питомца, 
+                        начните выгуливать чужих собак, чтобы оценить свои возможности</span>
                     </div>
-                    <div class="row_item">
-                        <img src="{{ asset('img/case.png') }}">
+                    <div class="row_item dogRow">
+                        <img src="{{ asset('img/sobaka.png') }}" class="dogWidth">
                         <div class="item__span">
                             <h2>Отличная подработка</h2>
                         </div>
-                        <span class="span_desc">Вам необязательно работать у нас определенное кол-во часов
-                        , каждый волкер сам себе начальник. Также для волкеров, которые хорошо отличаются
-                        в месяце предусмотрены различные поощрения</span>
+                        <span class="span_desc">Необязательно работать определенное количество часов,
+                        каждый волкер сам себе начальник. 
+                        Так же, для отличившихся волкеров предусмотрены поощрения.</span>
                     </div>
                 </div>
                 
@@ -112,7 +111,7 @@
     </div>
 </div>
 
-<div class="section block_about">
+<div class="section block_about gray">
     <div class="container">
         <div id="service" class="row">
             <div class="col-xs-12 ">
@@ -192,7 +191,7 @@
     </div>
 </div> -->
 
-<div class="section youtube_reviewsSection">
+<div class="section white">
     <div class="container">
         <div id="walkers" class="row">
             <div class="col-xs-12 ">
@@ -226,7 +225,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section gray">
     <div class="container">
         <div id="request" class="row">
             <div class="col-xs-12">

@@ -126,14 +126,17 @@ body {
 }
 
 .header__logo {
-	top: 25%;
-	left: -15%;
+	top: 22%;
+	left: -7.6%;
 	position: relative;
 	cursor: pointer;
 }
 
 .header__logo1{
-	cursor: pointer;
+	position: relative;
+  left: -7%;
+  top: 22%;
+  cursor: pointer;
 }
 
 .header__logo1 img {
@@ -144,8 +147,15 @@ body {
 
 .logo_container{
 	background-color: #000;
-	z-index: 999;
+	z-index: 999;	
 	height: 12vh;
+	margin-bottom: -12vh;
+}
+
+.logo_container_app1{
+	background-color: #000;
+	z-index: 999;	
+	/*height: 8vw;*/
 	margin-bottom: -12vh;
 }
 .logo_containerMap{
