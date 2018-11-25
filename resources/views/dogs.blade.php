@@ -14,7 +14,7 @@
 <body>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/vue/dist/vue.js')}}"></script>
 <div id="particles-js"></div>
-<div class="container dogs">
+<div class="container dogs profile">
     <div class="row">
         <div class="col-xs-12">
             <h1 class="lc">Питомцы</h1>

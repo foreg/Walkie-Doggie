@@ -16,8 +16,8 @@ body{
 }
 .instruction{
 	background-color: #fff;
-	border: 5px outset #ff4764;
-	border-right: 0px;
+	border: 5px outset #1b1b1b;
+	border-right: 0;
 	/*-moz-border-radius-topleft: 50px ;*/
 	padding: 3px;
 	margin-bottom: 5px;
@@ -26,7 +26,7 @@ body{
 	min-width: 60px;
 	position: fixed;
 	right: 0px;
-	top: 60px;
+	top: 100px;
 	width: 20%;
 	z-index: 2;
 }
@@ -37,7 +37,7 @@ body{
 		padding: 0 !important;
 		width: 100% !important;
 		position: absolute;
-		background: rgba(0,0,0,0.4) !important;
+		background: #1b1b1b !important;
 }
 .logo_containerMap{
 	max-width: 100% !important;
@@ -45,7 +45,7 @@ body{
 	padding: 0 !important;
 	width: 100% !important;
 	position: absolute;
-	background: rgba(176, 47, 71, 0.61) !important;
+	background: #1b1b1b !important;
 }
 
 .topnav a:hover{

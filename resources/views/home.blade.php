@@ -75,14 +75,14 @@
             <h1 class="lc">Работа</h1>
             {{--v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false"--}}
             <div class="addPet Pet col-xs-offset-2 col-xs-3">
-                <a href="{{route('addDog')}}"><img src="img/map.png" alt=""></a>
+                <a href="{{route('map')}}"><img src="img/map.png" alt=""></a>
                 <nav class="cl-effect-1">
                     {{--v-show="upHere"--}}
                     <a  href="{{route('map')}}">Взять заказ</a>
                 </nav>
             </div>
             <div class="watchPet Pet col-xs-offset-3 col-xs-3">
-                <a href="{{route('allDogs')}}"> <img src="img/stats.png" alt=""> </a>
+                <a href="#"> <img src="img/stats.png" alt=""> </a>
                 <nav class="cl-effect-1">
                     <a href="#">Статистика</a>
                 </nav>
