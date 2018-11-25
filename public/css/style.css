@@ -15,6 +15,7 @@ body{
 	height: 50px;
 }
 .instruction{
+	font-family: "Roboto", sans-serif;
 	background-color: #fff;
 	border: 5px outset #ff4764;
 	border-right: 0px;
@@ -26,7 +27,7 @@ body{
 	min-width: 60px;
 	position: fixed;
 	right: 0px;
-	top: 60px;
+	top: 110px;
 	width: 20%;
 	z-index: 2;
 }

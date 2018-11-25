@@ -139,6 +139,13 @@ body {
   cursor: pointer;
 }
 
+.header__logoMap{
+	position: relative;
+  left: 2.6%;
+  top: 22%;
+  cursor: pointer;
+}
+
 .header__logo1 img {
 	margin: 5px 0;
 	width: 69px;
