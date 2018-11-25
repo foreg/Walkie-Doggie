@@ -22,10 +22,10 @@ body{
 	padding: 3px;
 	margin-bottom: 5px;
 	display: block;
-	max-width: 300px;
-	min-width: 60px;
+	max-width: 400px;
+	min-width: 100px;
 	position: fixed;
-	right: 0px;
+	right: 0;
 	top: 100px;
 	width: 20%;
 	z-index: 2;
