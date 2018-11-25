@@ -33,6 +33,7 @@
                 <div class="profile_text">Цена</div>
                 <input class="inp" id="price" name="price" type="text" placeholder="400р" value="">
                 <div class="profile_text">&nbsp;&nbsp;</div>
+                <a class="btn btn-4 btn-4a aForWalk" href="{{ route('allDogs') }}">Назад</a>
                 <input class="btn btn-4 btn-4a btn-walk" name="walkDog" type="submit" value="Выгулять">
             </fieldset>
         </form>

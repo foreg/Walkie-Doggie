@@ -55,7 +55,7 @@
             <h1 class="lc">Питомцы</h1>
             {{--v-on:mouseover="upHere = true" v-on:mouseleave="upHere = false"--}}
             <div class="addPet Pet col-xs-offset-2 col-xs-3">
-                <a href="{{route('addDog')}}"><img src="img/plus.png" alt=""></a>
+                <a href="{{route('addDog')}}"><img src="img/Plus.png" alt=""></a>
                 <nav class="cl-effect-1">
                         {{--v-show="upHere"--}}
                         <a  href="{{route('addDog')}}">Добавить</a>

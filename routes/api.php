@@ -22,6 +22,10 @@ Route::post('walkData', 'WalkDataController@store');
 Route::put('walkData/{id}', 'WalkDataController@update');
 Route::delete('walkData/{id}', 'WalkDataController@delete');
 
+Route::get('GetUsersWalksAsOwner/{id}', 'WalkDataController@GetUsersWalksAsOwner');
+Route::get('GetUsersWalksAsWalker/{id}', 'WalkDataController@GetUsersWalksAsWalker');
+Route::post('SetWalker', 'WalkDataController@SetWalker');
+
 Route::get('users', 'UserController@index');
 Route::get('users/{user}', 'UserController@show');
 Route::post('users', 'UserController@store');
