@@ -25,7 +25,7 @@ class MapController extends Controller
            "type" => "FeatureCollection", 
             "features" => array(),
         );
-        $allWalks = Walk::all();
+        $allWalks = Walk::where('dt_w_start', '>', date('Y-m-d H:i:s'))->whereNull('last_bet_id')->get();
         foreach ($allWalks as $walk) {
             $adress = urlencode($walk->adress);
             $response = file_get_contents("https://geocode-maps.yandex.ru/1.x/?geocode=$adress");
@@ -39,7 +39,7 @@ class MapController extends Controller
             $dateTake = date("d.m.Y", strtotime($walk->dt_w_start));
             $dateAuckCreate = date("d.m.Y H:i:s", strtotime($walk->dt_a_start));
             $dateAuckFinish = date("d.m.Y H:i:s", strtotime($walk->dt_a_finish));
-            array_push($result["features"], ["type" => "Feature", "id"=>$walk->id, "geometry"=>["type"=>"Point", "coordinates"=>$coords], "properties"=>["balloonContentHeader"=>"<div class='info_h1'><h1>Кличка собаки: ".Dog::find($walk->dog_id)->name."</h1></div>", "balloonContentBody"=>"<div class='info__spans'><span>Время создания заявки: ".$dateCreate."</span><span>Время взятия заявки: ".$dateTake."</span><span>Длительность прогулки: ".$walk->dt_w_duration." мин</span><span>Время начала аукциона: ".$dateAuckCreate."</span><span>Время конца аукциона: ".$dateAuckFinish."</span><span>Начальная цена прогулки: ".$walk->price_start." руб.</span><span>Адресс клиента: ".$walk->adress."</span></div>", "clusterCaption"=>"<h4>".Dog::find($walk->dog_id)->name."</h4>"]]);
+            array_push($result["features"], ["type" => "Feature", "id"=>$walk->id, "geometry"=>["type"=>"Point", "coordinates"=>$coords], "properties"=>["balloonContentHeader"=>"<div class='info_h1'><h1>Кличка собаки: ".Dog::find($walk->dog_id)->name."</h1></div>", "balloonContentBody"=>"<div class='info__spans'><span>Время создания заявки: ".$dateCreate."</span><span>Время взятия заявки: ".$dateTake."</span><span>Длительность прогулки: ".$walk->dt_w_duration." мин</span><span>Время начала аукциона: ".$dateAuckCreate."</span><span>Время конца аукциона: ".$dateAuckFinish."</span><span>Начальная цена прогулки: ".$walk->price_start." руб.</span><span>Адресс клиента: ".$walk->adress."</span><span><input type='button' placeholder='fh' name=".$walk->id." value='взять' id='takeBTN'></input></span></div>", "clusterCaption"=>"<h4>".Dog::find($walk->dog_id)->name."</h4>"]]);
         };
         return json_encode($result);
     }
