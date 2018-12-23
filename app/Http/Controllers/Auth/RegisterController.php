@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Mail\WelcomeMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -62,10 +64,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        Mail::send(['text' => 'emails.welcome'], ['name', 'Example'], function ($message) use ($user) {
+            $message->to($user->email, $user->email) -> subject('Успешная регистрация!');
+            $message->from('walkiedoggie72@gmail.com', 'Walkie-Doggie');
+        });
+        return $user;
     }
 
     protected function createByVK()
