@@ -47,7 +47,19 @@
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
-                        </div>
+                        </div>     
+
+                       <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" required id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Я согласен(а) с условиями ') }} <a href="{{ route('agreement') }}">Пользовательского соглашения</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                   
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -21,6 +21,14 @@ Route::get('/walker', function () {
     return view('walker');
 })->name('walker');
 
+Route::get('/agreement', function () {
+    return view('agreement');
+})->name('agreement');
+
+Route::get('/policy', function () {
+    return view('policy');
+})->name('policy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
