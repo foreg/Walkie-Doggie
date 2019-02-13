@@ -24,6 +24,7 @@
         <div class="dog_photo col-xs-3">
             <img src="img/profile_start.jpg" alt="">
         </div>
+
         <div class="col-xs-5">
             <p class="inp">{{$dog->name}}</p>
             <a class="btn btn-4 btn-4a btn-dogs"

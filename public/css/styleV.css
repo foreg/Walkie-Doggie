@@ -193,7 +193,7 @@ body {
 
 .topnav a:hover{
 	opacity: 1;
-	border-bottom: 3px solid #ED2553;
+	border-bottom: 3px solid #ff9933;
 }
 
 .topnav a img{
@@ -315,7 +315,7 @@ body {
 	content: "";
 	display: block;
 	margin-top: 8px;
-	border-bottom: 3px solid #ED2553;
+	border-bottom: 3px solid #ff9933;
 	width: 18.4%;
 }
 
@@ -417,7 +417,7 @@ body {
 	display: block;
 	margin: 2px auto;
 	margin-top: 8px;
-	border: 2px solid #ED2553;
+	border: 2px solid #ff9933;
 	width: 45%;
 }
 
@@ -593,9 +593,9 @@ body {
 
 .pay button {
   width: 120px;
-  background: #ED2553;
+  background: #ff9933;
   color: #fff;
-  border: 2px solid #ED2553;
+  border: 2px solid #ff9933;
   border-radius: 5px;
   height: 25px;
 }
@@ -789,7 +789,7 @@ body {
 	display: block;
 	margin: 2px auto;
 	margin-top: 8px;
-	border: 2px solid #ED2553;
+	border: 2px solid #FF9933;
 	width: 20%;
 }
 
@@ -831,7 +831,7 @@ body {
   display: block;
   margin: 2px auto;
   margin-top: 8px;
-  border: 2px solid #ED2553;
+  border: 2px solid #FF9933;
   width: 20%;
 }
 .container_questions{
@@ -933,7 +933,7 @@ body {
 	background: #fff;
 }
 .buttonA-4:hover {
-	background: #ED2553;
+	background: #FF9933;
 	color: #fff;
 }
 
